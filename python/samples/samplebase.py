@@ -14,7 +14,7 @@ class SampleBase(object):
         self.parser.add_argument("-r", "--led-rows", action="store",
                                  help="Display rows. 16 for 16x32, 32 for 32x32. Default: 32", default=32, type=int)
         self.parser.add_argument("--led-cols", action="store",
-                                 help="Panel columns. Typically 32 or 64. (Default: 32)", default=64, type=int)
+                                 help="Panel columns. Typically 32 or 64. (Default: 32)", default=32, type=int)
         self.parser.add_argument("-c", "--led-chain", action="store",
                                  help="Daisy-chained boards. Default: 1.", default=1, type=int)
         self.parser.add_argument("-P", "--led-parallel", action="store",
