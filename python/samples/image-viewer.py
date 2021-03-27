@@ -37,7 +37,7 @@ image2.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 matrix.SetImage(image.convert('RGB'), -2, 33)
 matrix.SetImage(image2.convert('RGB'), 37, 33)
 
-matrix.SwapOnVSync(offscreen_canvas)
+# matrix.SwapOnVSync(offscreen_canvas)
 
 try:
     print("Press CTRL-C to stop.")
