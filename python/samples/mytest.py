@@ -11,6 +11,8 @@ class MyTest(SampleBase):
 
         while True:
             offset_canvas.SetPixel(15, 15, 0, 0, 255)
+            offset_canvas.SetPixel(16, 16, 255, 0, 0)
+            offset_canvas.SetPixel(17, 17, 0, 255, 0)
 
             offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
 
