@@ -10,7 +10,7 @@ image2 = Image.open("whitesox.png")
 font = graphics.Font()
 font.LoadFont("./fonts/7x13.bdf")
 textColor = graphics.Color(255, 255, 0)
-my_text = "@"
+my_text = "dsadasd"
 
 # Configuration for the matrix
 options = RGBMatrixOptions()
@@ -29,10 +29,11 @@ offscreen_canvas = matrix.CreateFrameCanvas()
 image.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 image2.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 
-matrix.SetImage(image.convert('RGB'), -2, 33)
-matrix.SetImage(image2.convert('RGB'), 37, 33)
+#matrix.SetImage(image.convert('RGB'), -2, 33)
+#matrix.SetImage(image2.convert('RGB'), 37, 33)
 
-graphics.DrawText(offscreen_canvas, font, 0, 10, textColor, my_text)
+graphics.DrawText(offscreen_canvas, font, 0, 0, textColor, my_text)
+matrix.SwapOnVSync(offscreen_canvas)
 
 try:
     print("Press CTRL-C to stop.")
