@@ -10,7 +10,8 @@ if len(sys.argv) < 2:
 else:
     image_file = sys.argv[1]
 
-image = Image.open(image_file)
+image = Image.open("milB.png")
+image2 = Image.open("whitesox.png")
 
 # Configuration for the matrix
 options = RGBMatrixOptions()
@@ -25,9 +26,11 @@ options.hardware_mapping = 'adafruit-hat'
 matrix = RGBMatrix(options=options)
 
 # Make image fit our screen.
-image.thumbnail((matrix.width, matrix.height), Image.ANTIALIAS)
+image.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
+image2.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 
-matrix.SetImage(image.convert('RGB'), 64, 30)
+matrix.SetImage(image.convert('RGB'), -5, 30)
+matrix.SetImage(image2.convert('RGB'), 5, 30)
 
 try:
     print("Press CTRL-C to stop.")
