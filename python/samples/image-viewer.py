@@ -26,13 +26,13 @@ options.pixel_mapper_config = "U-mapper"
 options.hardware_mapping = 'adafruit-hat'
 
 matrix = RGBMatrix(options=options)
-offscreen_canvas = matrix.CreateFrameCanvas()
+#offscreen_canvas = matrix.CreateFrameCanvas()
 
 # Make image fit our screen.
 image.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 image2.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 
-graphics.DrawText(offscreen_canvas, font, 14, 20, textColor, my_text)
+#graphics.DrawText(offscreen_canvas, font, 14, 20, textColor, my_text)
 
 matrix.SetImage(image.convert('RGB'), -2, 33)
 matrix.SetImage(image2.convert('RGB'), 37, 33)
