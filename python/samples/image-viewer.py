@@ -6,9 +6,10 @@ from PIL import Image
 import requests
 
 image_url = "https://lh3.googleusercontent.com/proxy/V6KZ6m33ku3Vdj7zsSnsi6uDIUuzfNhxgFRg4kV89P0cQ-ExSaBF5ir-kcCw8WdsxamUl1bZ7l_gNr-Nfk0t7xxhEsuIL-4Xh6IpROUyFK0XZhzWn3mvinbn4W9yYyOgjD-wzlU2a3g4Ic-TMB4p=p-h96-w96-rw"
+image2_url = "https://lh6.googleusercontent.com/proxy/Kuysu_p4Eeijarmvn5-aOATsarGJPVw7z4YJ0iE8zIGHSldg1_pJO5UCD7AwRcodgLv1IATwq94MDJmL7X5EhPNuw6J32PJCeRfkNnwmCm3GLAWclIokDA12QY2RLR-LKtL8ojVkwKBx9-A0q2yI=p-h96-w96-rw"
 
 image = Image.open(requests.get(image_url, stream=True).raw)
-image2 = Image.open("whitesox.png")
+image2 = Image.open(requests.get(image2_url, stream=True).raw)
 
 font = graphics.Font()
 font.LoadFont("./fonts/7x13.bdf")
