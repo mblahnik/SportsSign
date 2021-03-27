@@ -4,7 +4,7 @@ import sys
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 
-image = Image.open("milB.png")
+image = Image.open("https://lh3.googleusercontent.com/proxy/V6KZ6m33ku3Vdj7zsSnsi6uDIUuzfNhxgFRg4kV89P0cQ-ExSaBF5ir-kcCw8WdsxamUl1bZ7l_gNr-Nfk0t7xxhEsuIL-4Xh6IpROUyFK0XZhzWn3mvinbn4W9yYyOgjD-wzlU2a3g4Ic-TMB4p=p-h96-w96-rw")
 image2 = Image.open("whitesox.png")
 
 font = graphics.Font()
