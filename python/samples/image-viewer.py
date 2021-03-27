@@ -9,7 +9,7 @@ image2 = Image.open("whitesox.png")
 
 font = graphics.Font()
 font.LoadFont("./fonts/7x13.bdf")
-textColor = graphics.Color(255, 255, 0)
+textColor = graphics.Color(255, 0, 0)
 my_text = "dsadasd"
 
 # Configuration for the matrix
