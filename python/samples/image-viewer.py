@@ -7,7 +7,6 @@ from PIL import Image
 image = Image.open("milB.png")
 image2 = Image.open("whitesox.png")
 
-offscreen_canvas = self.matrix.CreateFrameCanvas()
 font = graphics.Font()
 font.LoadFont("../../../fonts/7x13.bdf")
 textColor = graphics.Color(255, 255, 0)
@@ -25,6 +24,7 @@ options.pixel_mapper_config = "U-mapper"
 options.hardware_mapping = 'adafruit-hat'
 
 matrix = RGBMatrix(options=options)
+offscreen_canvas = matrix.CreateFrameCanvas()
 
 # Make image fit our screen.
 image.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
