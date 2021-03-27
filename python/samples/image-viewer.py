@@ -9,8 +9,8 @@ image2 = Image.open("whitesox.png")
 
 font = graphics.Font()
 font.LoadFont("./fonts/7x13.bdf")
-textColor = graphics.Color(255, 0, 0)
-my_text = "dsadasd"
+textColor = graphics.Color(255, 255, 255)
+my_text = "@"
 
 # Configuration for the matrix
 options = RGBMatrixOptions()
