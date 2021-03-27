@@ -10,7 +10,7 @@ class MyTest(SampleBase):
         offset_canvas = self.matrix.CreateFrameCanvas()
 
         while True:
-            offset_canvas.SetPixel(15, 15, 255, 0, 0)
+            offset_canvas.SetPixel(15, 15, 0, 0, 255)
 
             offset_canvas = self.matrix.SwapOnVSync(offset_canvas)
 
