@@ -3,17 +3,21 @@ from bs4 import BeautifulSoup
 
 
 def main():
-    URL = 'https://www.espn.com/mlb/team/_/name/mil'
+    URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
     URL2 = 'https://www.espn.com/nfl/team/schedule/_/name/gb'
     URL3 = 'https://www.espn.com/mlb/boxscore?gameId=401289013'
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    r = soup.find_all('div', class_='game-meta')
+    # print(page.content)
 
-    for x in r:
-        print(x)
-        print("/")
+    r = soup.find_all('div', class_='Zndgme')
+
+    print(r[len(r)-1])
+
+    # for x in r:
+    # print(x)
+    # print("/")
 
    # tableRows = soup.find_all('tr', class_='Table__TR')
 
