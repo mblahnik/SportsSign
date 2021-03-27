@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 import time
 import sys
-
-from rgbmatrix import RGBMatrix, RGBMatrixOptions
+from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
-
-if len(sys.argv) < 2:
-    sys.exit("Require an image argument")
-else:
-    image_file = sys.argv[1]
 
 image = Image.open("milB.png")
 image2 = Image.open("whitesox.png")
+
+offscreen_canvas = self.matrix.CreateFrameCanvas()
+font = graphics.Font()
+font.LoadFont("../../../fonts/7x13.bdf")
+textColor = graphics.Color(255, 255, 0)
+pos = offscreen_canvas.width
+my_text = "@"
 
 # Configuration for the matrix
 options = RGBMatrixOptions()
@@ -31,6 +32,8 @@ image2.thumbnail((matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 
 matrix.SetImage(image.convert('RGB'), -2, 33)
 matrix.SetImage(image2.convert('RGB'), 37, 33)
+
+graphics.DrawText(offscreen_canvas, font, pos, 10, textColor, my_text)
 
 try:
     print("Press CTRL-C to stop.")
