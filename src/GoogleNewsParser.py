@@ -14,7 +14,6 @@ class GoogleNewsParser:
         self.Away_Team_Index = 0
         self.Home_Team_Index = 1
 
-    @timeout(60)
     def LoadPage(self):
         page = requests.get(self.brewersNewsURL)
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
