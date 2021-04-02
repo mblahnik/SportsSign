@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 import time
 from Scene import Scene
 from MLBSceneGenerator import MLBSceneGenerator
+from PIL import Image
 
 
 def main():
