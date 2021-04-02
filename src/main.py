@@ -22,10 +22,11 @@ def main():
 
     length = len(page.content)
     middle_index = length//2
-    third = length // (10//6)
+    third = round(length*.75)
 
     #soup = BeautifulSoup(page.content, 'lxml', parse_only=parse_list)
-    soup = BeautifulSoup(page.content[middle_index:third], 'html.parser')
+    soup = BeautifulSoup(
+        page.content[middle_index:third], 'lxml', parse_only=parse_list)
     print("Soup Gotten")
 
     # html.parser
