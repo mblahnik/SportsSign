@@ -3,9 +3,10 @@ from PIL import Image
 import time
 import os
 
+x = os.path.dirname(os.path.abspath(__file__))
+
 
 class MLBSceneRenderer:
-    x = os.path.dirname(os.path.abspath(__file__))
 
     def __init__(self):
         super().__init__()
