@@ -1,7 +1,8 @@
 import sys
 import os
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
+
 
 def main():
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
@@ -14,8 +15,10 @@ def main():
     page = requests.get(URL)
     print("PageLoaded")
 
+    parse_list = SoupStrainer('div', class_="SOsZve")
+
     print("Getting Soup")
-    soup = BeautifulSoup(page.content, 'html.parser')
+    soup = BeautifulSoup(page.content, 'html.parser', parse_only=parse_list)
     print("Soup Gotten")
 
     print("LoadingCard")
