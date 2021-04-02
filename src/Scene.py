@@ -7,3 +7,5 @@ class Scene:
         self.Away_Team_Logo_Image = None
         self.Home_Team_Score = None
         self.Away_Team_Score = None
+        self.InningText = None
+        self.AdditionalText = None
