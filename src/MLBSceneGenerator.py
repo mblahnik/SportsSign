@@ -39,8 +39,10 @@ class MLBSceneGenerator:
         textFont = graphics.Font()
         font.LoadFont("./fonts/6x9.bdf")
 
-        graphics.DrawText(matrix, font, 29, 12, textColor,
+        graphics.DrawText(matrix, font, 13, 6, textColor,
                           scene.AdditionalText[0])
+        graphics.DrawText(matrix, font, 13, 15, textColor,
+                          scene.AdditionalText[1])
 
         while True:
             time.sleep(10000)
