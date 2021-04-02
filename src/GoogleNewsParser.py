@@ -5,15 +5,15 @@ from PIL import Image
 
 
 class GoogleNewsParser:
-    brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
-    googleNewsHTML = ""
-    soup = None
-    card = None
-    Away_Team_Index = 0
-    Home_Team_Index = 1
 
     def __init__(self):
         super().__init__()
+        self.soup = None
+        self.card = None
+
+    brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+    Away_Team_Index = 0
+    Home_Team_Index = 1
 
     @timeout(60)
     def LoadPage(self):
@@ -31,32 +31,32 @@ class GoogleNewsParser:
         card = card[len(cards)-1]
 
     def GetHomeTeamLogo(self):
-        TeamLogos = card.find_all('img')
+        TeamLogos = self.card.find_all('img')
         Home_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
         return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
 
     def GetHomeTeamScore(self):
-        Scores = card.find_all('div', class_='nE4ijc')
+        Scores = self.card.find_all('div', class_='nE4ijc')
         return Scores[Home_Team_Index].string
 
     def GetAwayTeamLogo(self):
-        TeamLogos = card.find_all('img')
+        TeamLogos = self.card.find_all('img')
         Away_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
         return Image.open(requests.get(Away_Team_Logo_URL, stream=True).raw)
 
     def GetAwayTeamScore(self):
-        Scores = card.find_all('div', class_='nE4ijc')
+        Scores = self.card.find_all('div', class_='nE4ijc')
         return Scores[Home_Team_Index].string
 
     def GetInning(self):
-        InningTag = card.find_all('div', class_='MHBqCc uULV7d')
+        InningTag = self.card.find_all('div', class_='MHBqCc uULV7d')
         InningText = ""
         if len(InningTag) > 0:
             InningText = InningTag[0].string
         return InningText
 
     def GetAdditionalText(self):
-        AdditionalTextTags = card.find_all('div', class_='njYF6e')
+        AdditionalTextTags = self.card.find_all('div', class_='njYF6e')
         AdditionalText = []
         for tag in AdditionalTextTags:
             AdditionalText.append(tag.string)
