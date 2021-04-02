@@ -62,7 +62,7 @@ def main():
     Home_Team_Logo_Image = Image.open(
         requests.get(Home_Team_Logo_URL, stream=True).raw)
     Away_Team_Logo_Image = Image.open(
-        requests.get(Away_Team_Score, stream=True).raw)
+        requests.get(Away_Team_Logo_URL, stream=True).raw)
     Home_Team_Logo_Image.thumbnail(
         (matrix.width-35, matrix.height-35), Image.ANTIALIAS)
     Away_Team_Logo_Image.thumbnail(
