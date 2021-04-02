@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup, SoupStrainer
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 import time
+import Scene
+import MLBSceneGenerator
 
 
 def main():
@@ -74,12 +76,20 @@ def main():
     textColor = graphics.Color(255, 255, 255)
     my_text = "@"
     print("Drawing scene")
-    score = Away_Team_Score + "-" + Home_Team_Score
+    #score = Away_Team_Score + "-" + Home_Team_Score
    # graphics.DrawText(matrix, bigfont, 37, 32, textColor, Home_Team_Score)
-    graphics.DrawText(matrix, bigfont, 16, 32, textColor, score)
-    graphics.DrawText(matrix, font, 29, 50, textColor, my_text)
-    matrix.SetImage(Away_Team_Logo_Image.convert('RGB'), -2, 33)
-    matrix.SetImage(Home_Team_Logo_Image.convert('RGB'), 37, 33)
+    #graphics.DrawText(matrix, bigfont, 16, 32, textColor, score)
+    #graphics.DrawText(matrix, font, 29, 50, textColor, my_text)
+    #matrix.SetImage(Away_Team_Logo_Image.convert('RGB'), -2, 33)
+    #matrix.SetImage(Home_Team_Logo_Image.convert('RGB'), 37, 33)
+
+    scene = Scene()
+    scene.Home_Team_Logo_Image = Home_Team_Logo_Image
+    scene.Away_Team_Logo_Image = Away_Team_Logo_Image
+    scene.Home_Team_Score = Home_Team_Score
+    scene.Away_Team_Score = Away_Team_Score
+
+    MLBSceneGenerator.RenderScene(scene)
 
     while True:
         time.sleep(10000)
