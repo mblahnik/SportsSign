@@ -20,7 +20,7 @@ def main():
 
     print("Getting Soup")
     #soup = BeautifulSoup(page.content, 'lxml', parse_only=parse_list)
-    soup = BeautifulSoup(page.content, 'lxml')
+    soup = BeautifulSoup(page.content, 'html.parser')
     print("Soup Gotten")
 
     # html.parser
