@@ -10,11 +10,18 @@ def main():
     Away_Team_Index = 0
     Home_Team_Index = 1
 
+    print("Getting page")
     page = requests.get(URL)
-    soup = BeautifulSoup(page.content, 'html.parser')
+    print("PageLoaded")
 
+    print("Getting Soup")
+    soup = BeautifulSoup(page.content, 'html.parser')
+    print("Soup Gotten")
+
+    print("LoadingCard")
     r = soup.find_all('div', class_='SOsZve')
     r = r[len(r)-1]
+    print("CardLoaded")
 
     TeamLogos = r.find_all('img')
     Home_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
