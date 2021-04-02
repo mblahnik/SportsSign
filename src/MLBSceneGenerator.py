@@ -38,5 +38,7 @@ class MLBSceneGenerator:
 
         graphics.DrawText(matrix, font, 29, 12, textColor, "Hi")
 
+        print(scene.AdditionalText)
+
         while True:
             time.sleep(10000)
