@@ -29,7 +29,7 @@ def main():
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
     length = len(page.content)
-    start = round(length*.61)
+    start = round(length*.60)
     end = round(length*.65)
     print("GettingSoup")
     soup = BeautifulSoup(
