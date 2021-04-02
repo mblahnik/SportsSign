@@ -56,6 +56,8 @@ def main():
     Away_Team_Logo_Image = Image.open(
         requests.get(Away_Team_Logo_URL, stream=True).raw)
 
+    print(AdditionalText)
+
     scene = Scene()
     scene.Home_Team_Logo_Image = Home_Team_Logo_Image
     scene.Away_Team_Logo_Image = Away_Team_Logo_Image
