@@ -3,11 +3,10 @@ from PIL import Image
 import time
 
 
-class MLBSceneGenerator:
+class MLBSceneRenderer:
 
-    @staticmethod
-    def RenderScene(scene):
-        print("Drawing scene")
+    def __init__(self):
+        super().__init__()
         options = RGBMatrixOptions()
         options.rows = 32
         options.cols = 64
@@ -15,7 +14,11 @@ class MLBSceneGenerator:
         options.parallel = 1
         options.pixel_mapper_config = "U-mapper"
         options.hardware_mapping = 'adafruit-hat'
-        matrix = RGBMatrix(options=options)
+        self.matrix = RGBMatrix(options=options)
+        buffer = self.matrix.CreateFrameCanvas()
+
+    def RenderScene(self, scene):
+        print("Drawing scene")
 
         scene.Home_Team_Logo_Image.thumbnail(
             (matrix.width-35, matrix.height-35), Image.ANTIALIAS)
@@ -30,19 +33,17 @@ class MLBSceneGenerator:
         my_text = "@"
         score = scene.Away_Team_Score + "-" + scene.Home_Team_Score
         scorePositionOffset = (score.index("-")+1) * 8
-        graphics.DrawText(matrix, bigfont, 32-scorePositionOffset,
+        graphics.DrawText(self.buffer, bigfont, 32-scorePositionOffset,
                           32, textColor, score)
-        graphics.DrawText(matrix, font, 29, 50, textColor, my_text)
-        matrix.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
-        matrix.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
+        graphics.DrawText(self.buffer, font, 29, 50, textColor, my_text)
+        self.buffer.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
+        self.buffer.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
         if scene.InningText:
             textFont = graphics.Font()
             font.LoadFont("./fonts/6x13.bdf")
             positionOffset = (len(scene.InningText)/2) * 6
-            # if len(scene.InningText) % 2 == 0:
-            #positionOffset += 6
-            graphics.DrawText(matrix, font, 32-positionOffset,
+            graphics.DrawText(self.buffer, font, 32-positionOffset,
                               13, textColor, scene.InningText)
         else:
             textFont = graphics.Font()
@@ -52,9 +53,8 @@ class MLBSceneGenerator:
                 positionOffset = (len(line)/2) * 4
                 if len(line) % 2 == 0:
                     positionOffset += 4
-                graphics.DrawText(matrix, font, 32-positionOffset,
+                graphics.DrawText(self.buffer, font, 32-positionOffset,
                                   y_pos, textColor, line)
                 y_pos = y_pos + 8
 
-        while True:
-            time.sleep(10000)
+        buffer = self.matrix.SwapOnVSync(buffer)
