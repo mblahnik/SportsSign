@@ -71,6 +71,9 @@ def main():
     matrix.SetImage(Away_Team_Logo_Image.convert('RGB'), -2, 33)
     matrix.SetImage(Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
+    while True:
+        time.sleep(10000)
+
 
 if __name__ == "__main__":
     start_time = time.time()
