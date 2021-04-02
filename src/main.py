@@ -4,8 +4,8 @@ import requests
 from bs4 import BeautifulSoup, SoupStrainer
 import time
 from Scene import Scene
-#from MLBSceneGenerator import MLBSceneGenerator
-#from PIL import Image
+from MLBSceneGenerator import MLBSceneGenerator
+from PIL import Image
 
 
 def main():
@@ -52,22 +52,20 @@ def main():
         InningText = InningTag[0].string
 
     # Scene starts here
-    # Home_Team_Logo_Image = Image.open(
-        # requests.get(Home_Team_Logo_URL, stream=True).raw)
-    # Away_Team_Logo_Image = Image.open(
-        # requests.get(Away_Team_Logo_URL, stream=True).raw)
+    Home_Team_Logo_Image = Image.open(
+        requests.get(Home_Team_Logo_URL, stream=True).raw)
+    Away_Team_Logo_Image = Image.open(
+        requests.get(Away_Team_Logo_URL, stream=True).raw)
 
     scene = Scene()
-    #scene.Home_Team_Logo_Image = Home_Team_Logo_Image
-    #scene.Away_Team_Logo_Image = Away_Team_Logo_Image
+    scene.Home_Team_Logo_Image = Home_Team_Logo_Image
+    scene.Away_Team_Logo_Image = Away_Team_Logo_Image
     scene.Home_Team_Score = Home_Team_Score
     scene.Away_Team_Score = Away_Team_Score
     scene.InningText = InningText
     scene.AdditionalText = AdditionalText
 
-    # MLBSceneGenerator.RenderScene(scene)
-    print(AdditionalText)
-    print(InningText)
+    MLBSceneGenerator.RenderScene(scene)
 
 
 if __name__ == "__main__":
