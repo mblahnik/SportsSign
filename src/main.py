@@ -75,7 +75,6 @@ def main():
     # bigfont.LoadFont("./fonts/10x20.bdf")
     #textColor = graphics.Color(255, 255, 255)
     #my_text = "@"
-    print("Drawing scene")
     #score = Away_Team_Score + "-" + Home_Team_Score
    # graphics.DrawText(matrix, bigfont, 37, 32, textColor, Home_Team_Score)
     #graphics.DrawText(matrix, bigfont, 16, 32, textColor, score)
@@ -90,9 +89,6 @@ def main():
     scene.Away_Team_Score = Away_Team_Score
 
     MLBSceneGenerator.RenderScene(scene)
-
-    while True:
-        time.sleep(10000)
 
 
 if __name__ == "__main__":

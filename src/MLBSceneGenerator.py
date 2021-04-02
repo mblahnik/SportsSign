@@ -1,11 +1,13 @@
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
+import time
 
 
 class MLBSceneGenerator:
 
     @staticmethod
     def RenderScene(scene):
+        print("Drawing scene")
         options = RGBMatrixOptions()
         options.rows = 32
         options.cols = 64
@@ -33,3 +35,5 @@ class MLBSceneGenerator:
         graphics.DrawText(matrix, font, 29, 50, textColor, my_text)
         matrix.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
         matrix.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
+        while True:
+            time.sleep(10000)
