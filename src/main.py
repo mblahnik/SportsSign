@@ -13,7 +13,7 @@ def main():
     sceneRenderer = MLBSceneRenderer()
 
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
-    URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNREZrTlhvU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
+    URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE5pTTJvU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
 
     Away_Team_Index = 0
     Home_Team_Index = 1
