@@ -4,8 +4,8 @@ import requests
 from bs4 import BeautifulSoup, SoupStrainer
 import time
 from Scene import Scene
-from MLBSceneGenerator import MLBSceneGenerator
-from PIL import Image
+#from MLBSceneGenerator import MLBSceneGenerator
+#from PIL import Image
 
 
 def main():
@@ -16,13 +16,13 @@ def main():
     Away_Team_Index = 0
     Home_Team_Index = 1
 
-    page = requests.get(URL)
+    page = requests.get(URL2)
 
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
     length = len(page.content)
-    start = round(length*.60)
-    end = round(length*.68)
+    start = round(length*.55)
+    end = round(length*.65)
     print("GettingSoup")
     soup = BeautifulSoup(
         page.content[start:end], 'html.parser', parse_only=parse_list)
@@ -52,20 +52,22 @@ def main():
         InningText = InningTag[0].string
 
     # Scene starts here
-    Home_Team_Logo_Image = Image.open(
-        requests.get(Home_Team_Logo_URL, stream=True).raw)
-    Away_Team_Logo_Image = Image.open(
-        requests.get(Away_Team_Logo_URL, stream=True).raw)
+    # Home_Team_Logo_Image = Image.open(
+        # requests.get(Home_Team_Logo_URL, stream=True).raw)
+    # Away_Team_Logo_Image = Image.open(
+        # requests.get(Away_Team_Logo_URL, stream=True).raw)
 
     scene = Scene()
-    scene.Home_Team_Logo_Image = Home_Team_Logo_Image
-    scene.Away_Team_Logo_Image = Away_Team_Logo_Image
+    #scene.Home_Team_Logo_Image = Home_Team_Logo_Image
+    #scene.Away_Team_Logo_Image = Away_Team_Logo_Image
     scene.Home_Team_Score = Home_Team_Score
     scene.Away_Team_Score = Away_Team_Score
     scene.InningText = InningText
     scene.AdditionalText = AdditionalText
 
-    MLBSceneGenerator.RenderScene(scene)
+    # MLBSceneGenerator.RenderScene(scene)
+    print(AdditionalText)
+    print(InningText)
 
 
 if __name__ == "__main__":

@@ -36,17 +36,26 @@ class MLBSceneGenerator:
         matrix.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
         matrix.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
-        textFont = graphics.Font()
-        font.LoadFont("./fonts/5x7.bdf")
-
-        y_pos = 7
-        for line in scene.AdditionalText:
-            positionOffset = (len(line)/2) * 4
-            if len(line) % 2 == 0:
+        if scene.InningText:
+            textFont = graphics.Font()
+            font.LoadFont("./fonts/5x7.bdf")
+            positionOffset = (len(scene.InningText)/2) * 4
+            if len(scene.InningText) % 2 == 0:
                 positionOffset += 4
             graphics.DrawText(matrix, font, 32-positionOffset,
-                              y_pos, textColor, line)
-            y_pos = y_pos + 8
+                              7, textColor, scene.InningText)
+
+        else:
+            textFont = graphics.Font()
+            font.LoadFont("./fonts/5x7.bdf")
+            y_pos = 7
+            for line in scene.AdditionalText:
+                positionOffset = (len(line)/2) * 4
+                if len(line) % 2 == 0:
+                    positionOffset += 4
+                graphics.DrawText(matrix, font, 32-positionOffset,
+                                  y_pos, textColor, line)
+                y_pos = y_pos + 8
 
         while True:
             time.sleep(10000)
