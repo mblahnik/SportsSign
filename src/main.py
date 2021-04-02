@@ -26,7 +26,7 @@ def main():
 
     #soup = BeautifulSoup(page.content, 'lxml', parse_only=parse_list)
     soup = BeautifulSoup(
-        page.content[middle_index:third], 'lxml', parse_only=parse_list)
+        page.content[middle_index:third], 'html.parser', parse_only=parse_list)
     print("Soup Gotten")
 
     # html.parser
