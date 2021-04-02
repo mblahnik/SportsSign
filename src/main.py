@@ -4,21 +4,46 @@ from bs4 import BeautifulSoup
 
 def main():
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
+    URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE50TVc0U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
+
+    Away_Team_Index = 0
+    Home_Team_Index = 1
 
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    # print(page.content)
+    r = soup.find_all('div', class_='SOsZve')
+    r = r[len(r)-1]
 
-    r = soup.find_all('div', class_='Zndgme')
+    TeamLogos = r.find_all('img')
+    Home_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
+    Away_Team_Logo_URL = TeamLogos[Away_Team_Index]['src']
 
-    print(r[len(r)-1])
+    Scores = r.find_all('div', class_='nE4ijc')
 
-    # for x in r:
-    # print(x)
-    # print("/")
+    Home_Team_Score = Scores[Home_Team_Index].string
+    Away_Team_Score = Scores[Away_Team_Index].string
 
-   # tableRows = soup.find_all('tr', class_='Table__TR')
+    AdditionalTextTags = r.find_all('div', class_='njYF6e')
+    AdditionalText = []
+
+    for tag in AdditionalTextTags:
+        AdditionalText.append(tag.string)
+
+    InningTag = r.find_all('div', class_='MHBqCc uULV7d')
+    InningText = ""
+
+    if len(InningTag) > 0:
+        Inning = InningTag[0].string
+
+    print(AdditionalText)
+
+    print("HomeTeamURL : " + Home_Team_Logo_URL)
+    print("HomeTeamScore : " + Home_Team_Score)
+    print("\n")
+    print("AwayTeamURL : " + Away_Team_Logo_URL)
+    print("AwayTeamScore : " + Away_Team_Score)
+    print(InningText)
 
 
 if __name__ == "__main__":
