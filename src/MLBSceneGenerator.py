@@ -37,7 +37,7 @@ class MLBSceneGenerator:
         matrix.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
         textFont = graphics.Font()
-        font.LoadFont("./fonts/6x9.bdf")
+        font.LoadFont("./fonts/5x7.bdf")
 
         graphics.DrawText(matrix, font, 13, 6, textColor,
                           scene.AdditionalText[0])
