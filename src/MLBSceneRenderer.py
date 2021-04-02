@@ -15,7 +15,7 @@ class MLBSceneRenderer:
         options.pixel_mapper_config = "U-mapper"
         options.hardware_mapping = 'adafruit-hat'
         self.matrix = RGBMatrix(options=options)
-        buffer = self.matrix.CreateFrameCanvas()
+        self.buffer = self.matrix.CreateFrameCanvas()
 
     def RenderScene(self, scene):
         print("Drawing scene")
