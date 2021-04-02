@@ -13,7 +13,7 @@ def main():
     sceneRenderer = MLBSceneRenderer()
 
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
-    URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE5pTTJvU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
+    URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRGRzT0dZU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
 
     Away_Team_Index = 0
     Home_Team_Index = 1
@@ -22,7 +22,7 @@ def main():
 
     while True:
         try:
-            page = requests.get(URL)
+            page = requests.get(URL2)
 
             parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
