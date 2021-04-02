@@ -12,29 +12,23 @@ def main():
     Away_Team_Index = 0
     Home_Team_Index = 1
 
-    print("Getting page")
     page = requests.get(URL)
-    print("PageLoaded")
 
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
-    print("Getting Soup")
-
     length = len(page.content)
-    middle_index = length//2
-    third = round(length*.75)
+    start = round(length*.6)
+    end = round(length*.61)
 
-    #soup = BeautifulSoup(page.content, 'lxml', parse_only=parse_list)
+    print(start)
+    print(end)
+
+    print("Getting Soup")
     soup = BeautifulSoup(
-        page.content[middle_index:third], 'html.parser', parse_only=parse_list)
-    print("Soup Gotten")
+        page.content[start:end], 'html.parser', parse_only=parse_list)
 
-    # html.parser
-
-    print("LoadingCard")
     r = soup.find_all('div', class_='SOsZve')
     r = r[len(r)-1]
-    print("CardLoaded")
 
     TeamLogos = r.find_all('img')
     Home_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
@@ -57,14 +51,14 @@ def main():
     if len(InningTag) > 0:
         Inning = InningTag[0].string
 
-    print(AdditionalText)
+    # print(AdditionalText)
 
-    print("HomeTeamURL : " + Home_Team_Logo_URL)
-    print("HomeTeamScore : " + Home_Team_Score)
-    print("\n")
-    print("AwayTeamURL : " + Away_Team_Logo_URL)
-    print("AwayTeamScore : " + Away_Team_Score)
-    print(InningText)
+    #print("HomeTeamURL : " + Home_Team_Logo_URL)
+    #print("HomeTeamScore : " + Home_Team_Score)
+    # print("\n")
+    #print("AwayTeamURL : " + Away_Team_Logo_URL)
+    #print("AwayTeamScore : " + Away_Team_Score)
+    # print(InningText)
 
 
 if __name__ == "__main__":
