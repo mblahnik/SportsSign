@@ -15,7 +15,7 @@ def main():
     page = requests.get(URL)
     print("PageLoaded")
 
-    parse_list = SoupStrainer('div', class_="SOsZve")
+    parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
     print("Getting Soup")
     soup = BeautifulSoup(page.content, 'html.parser', parse_only=parse_list)
