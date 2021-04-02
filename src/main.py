@@ -2,6 +2,7 @@ import sys
 import os
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
+import time
 
 
 def main():
@@ -18,8 +19,11 @@ def main():
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
     print("Getting Soup")
-    soup = BeautifulSoup(page.content, 'html.parser', parse_only=parse_list)
+    #soup = BeautifulSoup(page.content, 'lxml', parse_only=parse_list)
+    soup = BeautifulSoup(page.content, 'lxml')
     print("Soup Gotten")
+
+    # html.parser
 
     print("LoadingCard")
     r = soup.find_all('div', class_='SOsZve')
@@ -58,4 +62,6 @@ def main():
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
+    print("--- %s seconds ---" % (time.time() - start_time))
