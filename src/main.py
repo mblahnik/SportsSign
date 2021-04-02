@@ -2,6 +2,8 @@ import sys
 import os
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
+from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
+from PIL import Image
 import time
 
 
@@ -12,7 +14,7 @@ def main():
     Away_Team_Index = 0
     Home_Team_Index = 1
 
-    page = requests.get(URL)
+    page = requests.get(URL2)
 
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
