@@ -8,6 +8,15 @@ import time
 
 
 def main():
+    options = RGBMatrixOptions()
+    options.rows = 32
+    options.cols = 64
+    options.chain_length = 2
+    options.parallel = 1
+    options.pixel_mapper_config = "U-mapper"
+    options.hardware_mapping = 'adafruit-hat'
+    matrix = RGBMatrix(options=options)
+
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
     URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE50TVc0U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
 
@@ -22,10 +31,6 @@ def main():
     start = round(length*.6)
     end = round(length*.63)
 
-    print(start)
-    print(end)
-
-    print("Getting Soup")
     soup = BeautifulSoup(
         page.content[start:end], 'html.parser', parse_only=parse_list)
 
@@ -53,14 +58,18 @@ def main():
     if len(InningTag) > 0:
         Inning = InningTag[0].string
 
-    print(AdditionalText)
+    # Scene starts here
+    Home_Team_Logo_Image = Image.open(
+        requests.get(Home_Team_Logo_URL, stream=True).raw)
+    Away_Team_Logo_Image = Image.open(
+        requests.get(Away_Team_Score, stream=True).raw)
+    Home_Team_Logo_Image.thumbnail(
+        (matrix.width-35, matrix.height-35), Image.ANTIALIAS)
+    Away_Team_Logo_Image.thumbnail(
+        (matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 
-    print("HomeTeamURL : " + Home_Team_Logo_URL)
-    print("HomeTeamScore : " + Home_Team_Score)
-    print("\n")
-    print("AwayTeamURL : " + Away_Team_Logo_URL)
-    print("AwayTeamScore : " + Away_Team_Score)
-    print(InningText)
+    matrix.SetImage(Away_Team_Logo_Image.convert('RGB'), -2, 33)
+    matrix.SetImage(Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
 
 if __name__ == "__main__":
