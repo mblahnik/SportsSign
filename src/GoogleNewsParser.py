@@ -10,14 +10,13 @@ class GoogleNewsParser:
         super().__init__()
         self.soup = None
         self.card = None
-
-    brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
-    Away_Team_Index = 0
-    Home_Team_Index = 1
+        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+        self.Away_Team_Index = 0
+        self.Home_Team_Index = 1
 
     @timeout(60)
     def LoadPage(self):
-        page = requests.get(brewersNewsURL)
+        page = requests.get(self.brewersNewsURL)
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
         self.soup = BeautifulSoup(page.content, 'html.parser')
         length = len(page.content)
@@ -32,21 +31,21 @@ class GoogleNewsParser:
 
     def GetHomeTeamLogo(self):
         TeamLogos = self.card.find_all('img')
-        Home_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
+        Home_Team_Logo_URL = TeamLogos[self.Home_Team_Index]['src']
         return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
 
     def GetHomeTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
-        return Scores[Home_Team_Index].string
+        return Scores[self.Home_Team_Index].string
 
     def GetAwayTeamLogo(self):
         TeamLogos = self.card.find_all('img')
-        Away_Team_Logo_URL = TeamLogos[Home_Team_Index]['src']
+        Away_Team_Logo_URL = TeamLogos[self.Away_Team_Index]['src']
         return Image.open(requests.get(Away_Team_Logo_URL, stream=True).raw)
 
     def GetAwayTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
-        return Scores[Home_Team_Index].string
+        return Scores[self.Away_Team_Index].string
 
     def GetInning(self):
         InningTag = self.card.find_all('div', class_='MHBqCc uULV7d')
