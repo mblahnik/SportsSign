@@ -3,9 +3,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 
-sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/..'))
-
-
 def main():
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
     URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE50TVc0U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
