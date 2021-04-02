@@ -18,7 +18,7 @@ def main():
 
     length = len(page.content)
     start = round(length*.6)
-    end = round(length*.61)
+    end = round(length*.63)
 
     print(start)
     print(end)
