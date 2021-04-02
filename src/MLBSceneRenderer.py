@@ -33,6 +33,7 @@ class MLBSceneRenderer:
         my_text = "@"
         score = scene.Away_Team_Score + "-" + scene.Home_Team_Score
         scorePositionOffset = (score.index("-")+1) * 8
+        self.buffer.Clear()
         graphics.DrawText(self.buffer, bigfont, 32-scorePositionOffset,
                           32, textColor, score)
         graphics.DrawText(self.buffer, font, 29, 50, textColor, my_text)
