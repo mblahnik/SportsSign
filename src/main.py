@@ -68,6 +68,12 @@ def main():
     Away_Team_Logo_Image.thumbnail(
         (matrix.width-35, matrix.height-35), Image.ANTIALIAS)
 
+    font = graphics.Font()
+    font.LoadFont("./fonts/7x13.bdf")
+    textColor = graphics.Color(255, 255, 255)
+    my_text = "@"
+
+    graphics.DrawText(matrix, font, 14, 20, textColor, my_text)
     matrix.SetImage(Away_Team_Logo_Image.convert('RGB'), -2, 33)
     matrix.SetImage(Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
