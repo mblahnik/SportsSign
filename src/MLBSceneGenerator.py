@@ -36,9 +36,8 @@ class MLBSceneGenerator:
         matrix.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
         matrix.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
-        graphics.DrawText(matrix, font, 29, 12, textColor, "Hi")
-
-        print(scene.AdditionalText)
+        graphics.DrawText(matrix, font, 29, 12, textColor,
+                          scene.AdditionalText[0])
 
         while True:
             time.sleep(10000)
