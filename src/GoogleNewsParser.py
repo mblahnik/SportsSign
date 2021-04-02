@@ -18,14 +18,14 @@ class GoogleNewsParser:
         page = requests.get(self.brewersNewsURL)
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
         length = len(page.content)
-        start = round(length*.55)
+        start = round(length*.60)
         end = round(length*.65)
         print("GettingSoup")
         self.soup = BeautifulSoup(
             page.content[start:end], 'html.parser', parse_only=parse_list)
         print("SoupGotten")
-        cards = soup.find_all('div', class_='SOsZve')
-        card = card[len(cards)-1]
+        cards = self.soup.find_all('div', class_='SOsZve')
+        self.card = cards[len(cards)-1]
 
     def GetHomeTeamLogo(self):
         TeamLogos = self.card.find_all('img')
