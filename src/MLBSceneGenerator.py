@@ -38,11 +38,12 @@ class MLBSceneGenerator:
 
         textFont = graphics.Font()
         font.LoadFont("./fonts/5x7.bdf")
-        textPositionOffset = (len(scene.AdditionalText[0])/2) * 4
+        text1PositionOffset = (len(scene.AdditionalText[0])/2) * 4
+        text2PositionOffset = (len(scene.AdditionalText[1])/2) * 4
 
-        graphics.DrawText(matrix, font, 32-textPositionOffset, 7, textColor,
+        graphics.DrawText(matrix, font, 32-text1PositionOffset, 7, textColor,
                           scene.AdditionalText[0])
-        graphics.DrawText(matrix, font, 32-textPositionOffset, 15, textColor,
+        graphics.DrawText(matrix, font, 32-text2PositionOffset, 15, textColor,
                           scene.AdditionalText[1])
 
         while True:
