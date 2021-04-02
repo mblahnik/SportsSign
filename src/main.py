@@ -19,8 +19,12 @@ def main():
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
     print("Getting Soup")
+
+    length = len(page.content)
+    middle_index = length//2
+
     #soup = BeautifulSoup(page.content, 'lxml', parse_only=parse_list)
-    soup = BeautifulSoup(page.content, 'html.parser')
+    soup = BeautifulSoup(page.content[middle_index:], 'html.parser')
     print("Soup Gotten")
 
     # html.parser
