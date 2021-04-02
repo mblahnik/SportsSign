@@ -18,7 +18,7 @@ def main():
     Away_Team_Index = 0
     Home_Team_Index = 1
 
-    sceneRenderer.printText("Loading Game...")
+    sceneRenderer.printText("Loading...")
 
     while True:
         try:

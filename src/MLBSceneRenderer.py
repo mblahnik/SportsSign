@@ -1,9 +1,11 @@
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 import time
+import os
 
 
 class MLBSceneRenderer:
+    x = os.path.dirname(os.path.abspath(__file__))
 
     def __init__(self):
         super().__init__()
@@ -26,7 +28,7 @@ class MLBSceneRenderer:
             (self.matrix.width-35, self.matrix.height-35), Image.ANTIALIAS)
 
         font = graphics.Font()
-        font.LoadFont("./fonts/7x13.bdf")
+        font.LoadFont(x + "/fonts/7x13.bdf")
         bigfont = graphics.Font()
         bigfont.LoadFont("./fonts/10x20.bdf")
         textColor = graphics.Color(255, 255, 255)
@@ -42,13 +44,13 @@ class MLBSceneRenderer:
 
         if scene.InningText:
             textFont = graphics.Font()
-            font.LoadFont("./fonts/6x13.bdf")
+            font.LoadFont(x + "/fonts/6x13.bdf")
             positionOffset = (len(scene.InningText)/2) * 6
             graphics.DrawText(self.buffer, font, 32-positionOffset,
                               13, textColor, scene.InningText)
         else:
             textFont = graphics.Font()
-            font.LoadFont("./fonts/5x7.bdf")
+            font.LoadFont(x + "/fonts/5x7.bdf")
             y_pos = 7
             for line in scene.AdditionalText:
                 positionOffset = (len(line)/2) * 4
@@ -64,7 +66,7 @@ class MLBSceneRenderer:
         self.buffer.Clear()
         textColor = graphics.Color(255, 255, 255)
         font = graphics.Font()
-        font.LoadFont("./fonts/6x13.bdf")
+        font.LoadFont(x + "/fonts/6x13.bdf")
         positionOffset = (len(text)/2) * 6
         graphics.DrawText(self.buffer, font, 32-positionOffset,
                           13, textColor, text)
