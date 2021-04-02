@@ -18,7 +18,6 @@ def main():
     matrix = RGBMatrix(options=options)
 
     URL = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
-    URL2 = 'https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE50TVc0U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen'
 
     Away_Team_Index = 0
     Home_Team_Index = 1
@@ -30,10 +29,10 @@ def main():
     length = len(page.content)
     start = round(length*.61)
     end = round(length*.65)
-
+    print("GettingSoup")
     soup = BeautifulSoup(
         page.content[start:end], 'html.parser', parse_only=parse_list)
-
+    print("SoupGotten")
     r = soup.find_all('div', class_='SOsZve')
     r = r[len(r)-1]
 
@@ -70,10 +69,15 @@ def main():
 
     font = graphics.Font()
     font.LoadFont("./fonts/7x13.bdf")
+    bigfont = graphics.Font()
+    bigfont.LoadFont("./fonts/10x20.bdf")
     textColor = graphics.Color(255, 255, 255)
     my_text = "@"
-
-    graphics.DrawText(matrix, font, 14, 20, textColor, my_text)
+    print("Drawing scene")
+    score = Away_Team_Score + "-" + Home_Team_Score
+   # graphics.DrawText(matrix, bigfont, 37, 32, textColor, Home_Team_Score)
+    graphics.DrawText(matrix, bigfont, 16, 32, textColor, score)
+    graphics.DrawText(matrix, font, 29, 50, textColor, my_text)
     matrix.SetImage(Away_Team_Logo_Image.convert('RGB'), -2, 33)
     matrix.SetImage(Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
