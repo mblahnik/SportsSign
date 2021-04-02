@@ -23,7 +23,7 @@ def main():
     Away_Team_Index = 0
     Home_Team_Index = 1
 
-    page = requests.get(URL1)
+    page = requests.get(URL)
 
     parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
