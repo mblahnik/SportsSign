@@ -59,3 +59,13 @@ class MLBSceneRenderer:
                 y_pos = y_pos + 8
 
         self.buffer = self.matrix.SwapOnVSync(self.buffer)
+
+    def printText(self, text):
+        self.buffer.Clear()
+        textColor = graphics.Color(255, 255, 255)
+        font = graphics.Font()
+        font.LoadFont("./fonts/6x13.bdf")
+        positionOffset = (len(text)/2) * 6
+        graphics.DrawText(self.buffer, font, 32-positionOffset,
+                          13, textColor, text)
+        self.buffer = self.matrix.SwapOnVSync(self.buffer)
