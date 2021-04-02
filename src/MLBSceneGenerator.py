@@ -42,6 +42,8 @@ class MLBSceneGenerator:
         y_pos = 7
         for line in scene.AdditionalText:
             positionOffset = (len(line)/2) * 4
+            if len(line) % 2 == 0:
+                positionOffset += 4
             graphics.DrawText(matrix, font, 32-positionOffset,
                               y_pos, textColor, line)
             y_pos = y_pos + 8
