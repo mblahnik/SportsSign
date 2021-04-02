@@ -51,14 +51,14 @@ def main():
     if len(InningTag) > 0:
         Inning = InningTag[0].string
 
-    # print(AdditionalText)
+    print(AdditionalText)
 
-    #print("HomeTeamURL : " + Home_Team_Logo_URL)
-    #print("HomeTeamScore : " + Home_Team_Score)
-    # print("\n")
-    #print("AwayTeamURL : " + Away_Team_Logo_URL)
-    #print("AwayTeamScore : " + Away_Team_Score)
-    # print(InningText)
+    print("HomeTeamURL : " + Home_Team_Logo_URL)
+    print("HomeTeamScore : " + Home_Team_Score)
+    print("\n")
+    print("AwayTeamURL : " + Away_Team_Logo_URL)
+    print("AwayTeamScore : " + Away_Team_Score)
+    print(InningText)
 
 
 if __name__ == "__main__":
