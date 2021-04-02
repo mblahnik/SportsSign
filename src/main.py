@@ -67,12 +67,12 @@ def main():
             # requests.get(Away_Team_Logo_URL, stream=True).raw)
 
             scene = Scene()
-            scene.Home_Team_Logo_Image = parser.GetHomeTeamLogo
-            scene.Away_Team_Logo_Image = parser.GetAwayTeamLogo
-            scene.Home_Team_Score = parser.GetHomeTeamScore
-            scene.Away_Team_Score = parser.GetAwayTeamScore
-            scene.InningText = parser.GetInning
-            scene.AdditionalText = parser.GetAdditionalText
+            scene.Home_Team_Logo_Image = parser.GetHomeTeamLogo()
+            scene.Away_Team_Logo_Image = parser.GetAwayTeamLogo()
+            scene.Home_Team_Score = parser.GetHomeTeamScore()
+            scene.Away_Team_Score = parser.GetAwayTeamScore()
+            scene.InningText = parser.GetInning()
+            scene.AdditionalText = parser.GetAdditionalText()
 
             sceneRenderer.RenderScene(scene)
         except KeyboardInterrupt:
