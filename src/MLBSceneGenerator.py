@@ -29,8 +29,8 @@ class MLBSceneGenerator:
         textColor = graphics.Color(255, 255, 255)
         my_text = "@"
         score = scene.Away_Team_Score + "-" + scene.Home_Team_Score
-        scorePositionOffset = len(score) * 8
-        graphics.DrawText(matrix, bigfont, scorePositionOffset,
+        scorePositionOffset = (score.index("-")+1) * 8
+        graphics.DrawText(matrix, bigfont, 32-scorePositionOffset,
                           32, textColor, score)
         graphics.DrawText(matrix, font, 29, 50, textColor, my_text)
         matrix.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
