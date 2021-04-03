@@ -21,7 +21,7 @@ class GoogleNewsParser:
         start = round(length*.55)
         end = round(length*.65)
         self.soup = BeautifulSoup(
-            page.content[start:end], 'html.parser', parse_only=parse_list)
+            page.content[start:end], 'html.parser')
         cards = self.soup.find_all('div', class_='SOsZve')
         self.card = cards[len(cards)-1]
 
