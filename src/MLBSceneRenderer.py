@@ -30,7 +30,7 @@ class MLBSceneRenderer:
         font = graphics.Font()
         font.LoadFont(x + "/fonts/7x13.bdf")
         bigfont = graphics.Font()
-        bigfont.LoadFont("./fonts/10x20.bdf")
+        bigfont.LoadFont(x + "./fonts/10x20.bdf")
         textColor = graphics.Color(255, 255, 255)
         my_text = "@"
         score = scene.Away_Team_Score + "-" + scene.Home_Team_Score
