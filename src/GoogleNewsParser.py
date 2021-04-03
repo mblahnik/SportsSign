@@ -21,7 +21,7 @@ class GoogleNewsParser:
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
         length = len(page.content)
         start = round(length*.59)
-        end = round(length*0.64)
+        end = round(length*0.69)
         print("Getting Soup")
         self.soup = BeautifulSoup(
             page.content[start:end], 'html.parser', parse_only=parse_list)
