@@ -6,9 +6,9 @@ brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV
 page = requests.get(brewersNewsURL)
 parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 length = len(page.content)
-start = round(length*.59)
+start = round(length*.55)
 end = round(length*.65)
-soup = BeautifulSoup(page.content[start:end], 'html.parser')
+soup = BeautifulSoup(page.content[start:], 'html.parser')
 cards = soup.find_all('div', class_='SOsZve')
 card = cards[len(cards)-1]
 
