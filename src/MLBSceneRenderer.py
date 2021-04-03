@@ -65,7 +65,7 @@ class MLBSceneRenderer:
 
     def printText(self, text):
         self.buffer.Clear()
-        textColor = graphics.Color(255, 255, 255)
+        textColor = graphics.Color(0, 0, 255)
         font = graphics.Font()
         font.LoadFont(x + "/fonts/6x13.bdf")
         positionOffset = (len(text)/2) * 6
