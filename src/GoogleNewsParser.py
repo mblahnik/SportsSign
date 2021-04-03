@@ -20,8 +20,8 @@ class GoogleNewsParser:
         print("Got Page")
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
         length = len(page.content)
-        start = round(length*.55)
-        end = round(length*0.65)
+        start = page.text.find("<div class=\"SOsZve\">")
+        end = page.text.find("<div class=\"gF8v3d\">")
         print("Getting Soup")
         self.soup = BeautifulSoup(
             page.content[start:end], 'html.parser', parse_only=parse_list)
