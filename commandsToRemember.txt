@@ -1,1 +1,10 @@
 sudo systemctl start reboot.target
+
+demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper" 
+
+rpi-rgb-led-matrix/examples-api-use/demo 
+
+sudo /home/pi/rpi-rgb-led-matrix/examples-api-use/demo --D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper"
+
+
+ sudo /home/pi/rpi-rgb-led-matrix/examples-api-use/demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper" --led-gpio-mapping="adafruit-hat-pwm"
