@@ -10,7 +10,7 @@ class GoogleNewsParser:
         super().__init__()
         self.soup = None
         self.card = None
-        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFJ0YW13U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
         self.Away_Team_Index = 0
         self.Home_Team_Index = 1
 
@@ -28,7 +28,8 @@ class GoogleNewsParser:
     def GetHomeTeamLogo(self):
         TeamLogos = self.card.find_all('img')
         Home_Team_Logo_URL = TeamLogos[self.Home_Team_Index]['src']
-        return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
+        return Image.open("./TeamLogos/MLB/Brewers.svg")
+        # return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
 
     def GetHomeTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
