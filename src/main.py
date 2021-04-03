@@ -31,8 +31,6 @@ def main():
             quit()
         except TimeoutError:
             print("Request taking too long, starting over")
-        except:
-            print("Trying again")
 
 
 if __name__ == "__main__":
