@@ -17,9 +17,10 @@ class MLBSceneRenderer:
         options.parallel = 1
         options.pixel_mapper_config = "U-mapper"
         options.hardware_mapping = 'adafruit-hat-pwm'
-        options.pwm_lsb_nanoseconds = 130
+        options.pwm_lsb_nanoseconds = 50
         options.show_refresh_rate = 1
         options.pwm_bits = 7
+        options.parallel = 3
         self.matrix = RGBMatrix(options=options)
         self.buffer = self.matrix.CreateFrameCanvas()
 
