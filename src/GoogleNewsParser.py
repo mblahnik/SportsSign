@@ -28,8 +28,8 @@ class GoogleNewsParser:
     def GetHomeTeamLogo(self):
         TeamLogos = self.card.find_all('img')
         Home_Team_Logo_URL = TeamLogos[self.Home_Team_Index]['src']
-        return Image.open("./TeamLogos/MLB/Brewers.png")
-        # return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
+        # return Image.open("./TeamLogos/MLB/Brewers.png")
+        return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
 
     def GetHomeTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
@@ -38,8 +38,8 @@ class GoogleNewsParser:
     def GetAwayTeamLogo(self):
         TeamLogos = self.card.find_all('img')
         Away_Team_Logo_URL = TeamLogos[self.Away_Team_Index]['src']
-        return Image.open("./TeamLogos/MLB/Twins.png")
-        # return Image.open(requests.get(Away_Team_Logo_URL, stream=True).raw)
+        # return Image.open("./TeamLogos/MLB/Twins.png")
+        return Image.open(requests.get(Away_Team_Logo_URL, stream=True).raw)
 
     def GetAwayTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
