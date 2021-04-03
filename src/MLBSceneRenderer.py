@@ -14,12 +14,10 @@ class MLBSceneRenderer:
         options.rows = 32
         options.cols = 64
         options.chain_length = 2
-        options.parallel = 1
         options.pixel_mapper_config = "U-mapper"
         options.hardware_mapping = 'adafruit-hat-pwm'
-        options.pwm_lsb_nanoseconds = 50
-        options.show_refresh_rate = 1
-        options.pwm_bits = 7
+        options.pwm_lsb_nanoseconds = 130
+        options.gpio_slowdown = 0
         self.matrix = RGBMatrix(options=options)
         self.buffer = self.matrix.CreateFrameCanvas()
 
