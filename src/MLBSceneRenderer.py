@@ -21,7 +21,6 @@ class MLBSceneRenderer:
         self.buffer = self.matrix.CreateFrameCanvas()
 
     def RenderScene(self, scene):
-        print("Drawing scene")
 
         scene.Home_Team_Logo_Image.thumbnail(
             (self.matrix.width-35, self.matrix.height-35), Image.ANTIALIAS)
