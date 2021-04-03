@@ -15,17 +15,13 @@ class GoogleNewsParser:
         self.Home_Team_Index = 1
 
     def LoadPage(self):
-        print("Getting Page")
         page = requests.get(self.brewersNewsURL)
-        print("Got Page")
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
         length = len(page.content)
         start = page.text.find("<div class=\"SOsZve\">")
         end = page.text.find("<div class=\"gF8v3d\">")
-        print("Getting Soup")
         self.soup = BeautifulSoup(
             page.content[start:end], 'html.parser', parse_only=parse_list)
-        print("Got soup")
         cards = self.soup.find_all('div', class_='SOsZve')
         self.card = cards[len(cards)-1]
 
