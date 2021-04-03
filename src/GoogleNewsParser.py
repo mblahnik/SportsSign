@@ -18,8 +18,8 @@ class GoogleNewsParser:
         page = requests.get(self.brewersNewsURL)
         parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
         length = len(page.content)
-        start = round(length*.60)
-        end = round(length*.67)
+        start = round(length*.55)
+        end = round(length*.65)
         self.soup = BeautifulSoup(
             page.content[start:end], 'html.parser', parse_only=parse_list)
         cards = self.soup.find_all('div', class_='SOsZve')
