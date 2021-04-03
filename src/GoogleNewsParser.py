@@ -10,7 +10,7 @@ class GoogleNewsParser:
         super().__init__()
         self.soup = None
         self.card = None
-        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ/sections/CAQiVENCQVNPUW9JTDIwdk1EVXhkbm9TQW1WdUlnWUlBUklDQ0FrcUlRb2ZDaHRUVUU5U1ZGTmZVa1ZUVlV4VVUxOVRSVU5VU1U5T1gwNUJUVVVnQVNnQSolCAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAVAB?hl=en-US&gl=US&ceid=US%3Aen"
         self.Away_Team_Index = 0
         self.Home_Team_Index = 1
 
