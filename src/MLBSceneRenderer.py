@@ -20,7 +20,6 @@ class MLBSceneRenderer:
         options.pwm_lsb_nanoseconds = 50
         options.show_refresh_rate = 1
         options.pwm_bits = 7
-        options.parallel = 3
         self.matrix = RGBMatrix(options=options)
         self.buffer = self.matrix.CreateFrameCanvas()
 
