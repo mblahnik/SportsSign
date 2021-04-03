@@ -16,7 +16,7 @@ class MLBSceneRenderer:
         options.chain_length = 2
         options.parallel = 1
         options.pixel_mapper_config = "U-mapper"
-        options.hardware_mapping = 'adafruit-hat'
+        options.hardware_mapping = 'adafruit-hat-pwn'
         self.matrix = RGBMatrix(options=options)
         self.buffer = self.matrix.CreateFrameCanvas()
 

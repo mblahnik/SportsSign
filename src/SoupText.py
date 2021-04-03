@@ -26,11 +26,5 @@ Scores = card.find_all('div', class_='nE4ijc')
 date = soup.find_all('div', class_='fMAqYb')
 # print(date)
 
-teams = soup.findAll('div', class_='MlH7je')
-print(teams)
-
-daysDict = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6,
-            "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dev": 12}
-
-
-date_time_obj = datetime.datetime.strptime()
+test = card.findAll('div', class_='MlH7je')
+print(test)
