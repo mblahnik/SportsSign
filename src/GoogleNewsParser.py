@@ -28,7 +28,7 @@ class GoogleNewsParser:
     def GetHomeTeamLogo(self):
         TeamLogos = self.card.find_all('img')
         Home_Team_Logo_URL = TeamLogos[self.Home_Team_Index]['src']
-        return Image.open("./TeamLogos/MLB/Brewers.svg")
+        return Image.open("./TeamLogos/MLB/Brewers.png")
         # return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
 
     def GetHomeTeamScore(self):
