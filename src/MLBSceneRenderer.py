@@ -17,7 +17,7 @@ class MLBSceneRenderer:
         options.pixel_mapper_config = "U-mapper"
         options.hardware_mapping = 'adafruit-hat-pwm'
         options.pwm_lsb_nanoseconds = 130
-        options.gpio_slowdown = 0
+        options.gpio_slowdown = 4
         self.matrix = RGBMatrix(options=options)
         self.buffer = self.matrix.CreateFrameCanvas()
 
