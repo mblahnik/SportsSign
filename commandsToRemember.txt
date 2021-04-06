@@ -1,6 +1,6 @@
 sudo systemctl start reboot.target
 
-demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper" 
+demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper"  --led-slowdown-gpio=4 --led-gpio-mapping="adafruit-hat-pwm"
 
 rpi-rgb-led-matrix/examples-api-use/demo 
 
@@ -8,3 +8,8 @@ sudo /home/pi/rpi-rgb-led-matrix/examples-api-use/demo --D0 --led-rows=32 --led-
 
 
  sudo /home/pi/rpi-rgb-led-matrix/examples-api-use/demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper" --led-gpio-mapping="adafruit-hat-pwm"
+
+
+ udo ./led-image-viewer -C  jesus2.gif --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper" --led-gpio-mapping="adafruit-hat-pwm"
+
+sudo /home/pi/rpi-rgb-led-matrix/utils/led-image-viewer -C  /home/pi/rpi-rgb-led-matrix/utils/jesus2.gif --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper" --led-gpio-mapping="adafruit-hat-pwm" &
