@@ -28,7 +28,7 @@ class GoogleNewsParser:
             page.content[start:end], 'html.parser', parse_only=parse_list)
         cards = self.soup.find_all('div', class_='SOsZve')
         self.card = cards[len(cards)-1]
-        self.UpcomingGameCard = soup.find('div', class_='LI3zEe uP1HId')
+        self.UpcomingGameCard = self.soup.find('div', class_='LI3zEe uP1HId')
 
     def GetHomeTeamLogo(self):
         hometeamName = self.card.findAll('div', class_='MlH7je')[
