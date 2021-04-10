@@ -27,7 +27,7 @@ def main():
             scene.AdditionalText = parser.GetAdditionalText()
 
             sceneRenderer.RenderScene(scene)
-            time.sleep(15000)
+            time.sleep(30)
         except KeyboardInterrupt:
             quit()
         except TimeoutError:
