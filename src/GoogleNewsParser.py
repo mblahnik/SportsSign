@@ -12,7 +12,8 @@ class GoogleNewsParser:
         self.soup = None
         self.card = None
         self.UpcomingGameCard = None
-        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+        #self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+        self.brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRE50TVc0U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
         self.Away_Team_Index = 0
         self.Home_Team_Index = 1
 
