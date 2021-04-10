@@ -1,6 +1,6 @@
 sudo systemctl start reboot.target
 
-demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper"  --led-slowdown-gpio=4 --led-gpio-mapping="adafruit-hat-pwm"
+sudo ./demo -D0 --led-rows=32 --led-cols=64 --led-chain=2 --led-pixel-mapper="U-mapper"  --led-slowdown-gpio=4 --led-gpio-mapping="adafruit-hat-pwm" --led-pwm-lsb-nanoseconds=50
 
 rpi-rgb-led-matrix/examples-api-use/demo 
 

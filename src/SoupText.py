@@ -26,5 +26,14 @@ Scores = card.find_all('div', class_='nE4ijc')
 date = soup.find_all('div', class_='fMAqYb')
 # print(date)
 
-test = card.findAll('div', class_='MlH7je')
-print(test)
+CurrentTeams = card.findAll('div', class_='MlH7je')[0].string.lower()
+print(CurrentTeams)
+
+upcomingGame = soup.find('div', class_='LI3zEe uP1HId')
+# print(test)
+
+dates = upcomingGame.find_all('div', class_='fMAqYb')
+# print(dates)
+
+teams = upcomingGame.find_all('div', class_='MlH7je')[0]
+# print(teams)
