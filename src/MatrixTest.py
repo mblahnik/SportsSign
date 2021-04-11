@@ -60,6 +60,19 @@ matrix.SetPixel(img_x + 3, img_y + 25, 0, 0, 0)
 matrix.SetPixel(img_x + 4, img_y + 26, 0, 0, 0)
 matrix.SetPixel(img_x + 4, img_y + 27, 0, 0, 0)
 
+# I am here
+matrix.SetPixel(img_x + 5, img_y + 27, 0, 0, 0)
+matrix.SetPixel(img_x + 5, img_y + 28, 0, 0, 0)
+
+matrix.SetPixel(img_x + 6, img_y + 27, 0, 0, 0)
+matrix.SetPixel(img_x + 6, img_y + 28, 0, 0, 0)
+matrix.SetPixel(img_x + 6, img_y + 29, 0, 0, 0)
+
+matrix.SetPixel(img_x + 7, img_y + 28, 0, 0, 0)
+matrix.SetPixel(img_x + 7, img_y + 28, 0, 0, 0)
+
+matrix.SetPixel(img_x + 8, img_y + 30, 0, 0, 0)
+
 
 while True:
     x = 1
