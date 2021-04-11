@@ -43,12 +43,12 @@ class MLBSceneRenderer:
         self.buffer.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
         self.buffer.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
 
-        if scene.InningText:
+        if scene.MainText:
             textFont = graphics.Font()
             font.LoadFont(x + "/fonts/6x13.bdf")
-            positionOffset = (len(scene.InningText)/2) * 6
+            positionOffset = (len(scene.MainText)/2) * 6
             graphics.DrawText(self.buffer, font, 32-positionOffset,
-                              13, textColor, scene.InningText)
+                              13, textColor, scene.MainText)
         else:
             textFont = graphics.Font()
             font.LoadFont(x + "/fonts/5x7.bdf")
