@@ -61,7 +61,7 @@ class MLBSceneRenderer:
                                   y_pos, textColor, line)
                 y_pos = y_pos + 8
 
-        self.buffer.SetPixel(1, 37, 0, 0, 0)
+        self.buffer.SetPixel(1, 37, 255, 0, 0)
 
         self.buffer = self.matrix.SwapOnVSync(self.buffer)
 
