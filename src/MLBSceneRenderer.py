@@ -79,8 +79,25 @@ class MLBSceneRenderer:
         self.buffer.SetPixel(0, 57, 0, 0, 0)
         self.buffer.SetPixel(0, 56, 0, 0, 0)
         self.buffer.SetPixel(0, 55, 0, 0, 0)
+
         self.buffer.SetPixel(1, 57, 0, 0, 0)
         self.buffer.SetPixel(1, 58, 0, 0, 0)
+
+        self.buffer.SetPixel(2, 57, 0, 0, 0)
+        self.buffer.SetPixel(2, 59, 0, 0, 0)
+        self.buffer.SetPixel(2, 60, 0, 0, 0)
+
+        self.buffer.SetPixel(3, 61, 0, 0, 0)
+        self.buffer.SetPixel(3, 60, 0, 0, 0)
+
+        self.buffer.SetPixel(4, 62, 0, 0, 0)
+        self.buffer.SetPixel(4, 61, 0, 0, 0)
+        self.buffer.SetPixel(4, 60, 0, 0, 0)
+
+        self.buffer.SetPixel(5, 61, 0, 0, 0)
+        self.buffer.SetPixel(5, 62, 0, 0, 0)
+
+        self.buffer.SetPixel(6, 63, 0, 0, 0)
 
     def printText(self, text):
         self.buffer.Clear()
