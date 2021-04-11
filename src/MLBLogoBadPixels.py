@@ -26,9 +26,9 @@ AngelsLogoBadPixels = [Pixel(0, 24), Pixel(
         7, 0), Pixel(7, 1), Pixel(7, 2), Pixel(8, 1), Pixel(4, 11),
     Pixel(4, 12), Pixel(4, 14), Pixel(8, 28), Pixel(8, 29), Pixel(8, 30), Pixel(
         9, 29), Pixel(10, 29), Pixel(10, 30), Pixel(11, 29), Pixel(12, 30),
-    Pixel(13, 0), Pixel(13, 1), Pixel(14, 3), Pixel(15, 3), Pixel(16, 4), Pixel(
-        16, 8), Pixel(1, 17), Pixel(1, 21), Pixel(1, 22), Pixel(1, 23),
-    Pixel(0, 26), Pixel(0, 28), Pixel(0, 30), Pixel(1, 6), Pixel(1, 7), Pixel(1, 8), Pixel(1, 17), Pixel(1, 21), Pixel(1, 22), Pixel(1, 23)]
+    Pixel(13, 0), Pixel(13, 1), Pixel(14, 2), Pixel(15, 2), Pixel(16, 3), Pixel(
+        16, 9), Pixel(16, 12), Pixel(17, 4), Pixel(17, 8), Pixel(17, 9),
+    Pixel(17, 12), Pixel(17, 13), Pixel(17, 14), Pixel(17, 15), Pixel(1, 7), Pixel(1, 8), Pixel(1, 17), Pixel(1, 21), Pixel(1, 22), Pixel(1, 23)]
 
 
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
