@@ -3,7 +3,7 @@ import requests
 from timeout import timeout
 import datetime
 
-brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFV4ZG5vU0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
+brewersNewsURL = "https://news.google.com/topics/CAAqIQgKIhtDQkFTRGdvSUwyMHZNRFJ0YW13U0FtVnVLQUFQAQ?hl=en-US&gl=US&ceid=US%3Aen"
 page = requests.get(brewersNewsURL)
 parse_list = SoupStrainer('div', attrs={"class": "SOsZve"})
 
@@ -27,13 +27,13 @@ date = soup.find_all('div', class_='fMAqYb')
 # print(date)
 
 CurrentTeams = card.findAll('div', class_='MlH7je')[0].string.lower()
-print(CurrentTeams)
+# print(CurrentTeams)
 
 upcomingGame = soup.find('div', class_='LI3zEe uP1HId')
-# print(test)
+# print(upcomingGame)
 
-dates = upcomingGame.find_all('div', class_='fMAqYb')
-# print(dates)
+dates = upcomingGame.find('div', class_='fMAqYb')
+print(dates)
 
 teams = upcomingGame.find_all('div', class_='MlH7je')[0]
 # print(teams)
