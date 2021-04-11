@@ -20,7 +20,7 @@ image = Image.open("./TeamLogos/MLB/Brewers.png")
 
 image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
-matrix.SetImage(image.convert('RGB'))
+matrix.SetImage(image.convert('RGB'), 32, 32)
 #matrix.Fill(255, 0, 0)
 # matrix.SetPixel(x,y,r,g,b)
 
