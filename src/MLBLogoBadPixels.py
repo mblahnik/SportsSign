@@ -110,7 +110,7 @@ MarlinsLogoBadPixels = [Pixel(7, 0), Pixel(7, 1), Pixel(7, 2), Pixel(7, 3), Pixe
                             13, 28), Pixel(15, 28), Pixel(16, 27), Pixel(16, 26),
                         Pixel(28, 15), Pixel(27, 17), Pixel(27, 18), Pixel(26, 20), Pixel(26, 21), Pixel(
                             26, 22), Pixel(25, 23), Pixel(25, 24), Pixel(25, 25), Pixel(25, 26), Pixel(25, 27),
-                        Pixel(24, 26), Pixel(25, 27)]
+                        Pixel(24, 26), Pixel(24, 27)]
 MetsLogoBadPixels = []
 NationalsLogoBadPixels = []
 OriolesLogoBadPixels = []
