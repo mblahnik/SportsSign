@@ -150,7 +150,7 @@ PhilliesLogoBadPixels = [Pixel(0, 3), Pixel(0, 4), Pixel(1, 2), Pixel(2, 1), Pix
                          Pixel(4, 16), Pixel(5, 16), Pixel(6, 15), Pixel(5, 17), Pixel(5, 18), Pixel(
                              5, 19), Pixel(5, 20), Pixel(5, 21), Pixel(5, 22), Pixel(5, 23),
                          Pixel(20, 0), Pixel(21, 1), Pixel(22, 1), Pixel(22, 2), Pixel(23, 3), Pixel(
-                             23, 4), Pixel(6, 22), Pixel(4, 24), Pixel(4, 25), Pixel(3, 25),
+                             23, 2), Pixel(6, 22), Pixel(4, 24), Pixel(4, 25), Pixel(3, 25),
                          Pixel(3, 26), Pixel(3, 27), Pixel(3, 28), Pixel(3, 29), Pixel(4, 29), Pixel(4, 30)]
 RangersLogoBadPixels = []
 RaysLogoBadPixels = []
