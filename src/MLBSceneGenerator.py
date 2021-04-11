@@ -37,6 +37,6 @@ class MLBSceneGenerator:
         dateSplit = upcomingDateString.split()
         year = datetime.datetime.now().year
         nextGameDate = datetime.datetime(
-            year, dateDict[dateSplit[1]], dateSplit[2])
+            year, dateDict[dateSplit[1]], int(dateSplit[2]))
 
         return currentDate == nextGameDate
