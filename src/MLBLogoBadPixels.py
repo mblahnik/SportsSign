@@ -98,6 +98,7 @@ MarinersLogoBadPixels = [Pixel(0, 3), Pixel(0, 4), Pixel(1, 2), Pixel(2, 1), Pix
     Pixel(16, 12), Pixel(17, 12), Pixel(17, 14), Pixel(17, 15), Pixel(18, 14), Pixel(18, 15), Pixel(
         18, 17), Pixel(18, 25), Pixel(17, 26), Pixel(17, 27), Pixel(16, 28), Pixel(15, 29), Pixel(14, 30),
     Pixel(1, 13), Pixel(1, 14), Pixel(1, 15), Pixel(2, 14), Pixel(2, 15), Pixel(17, 16)]
+
 MarlinsLogoBadPixels = []
 MetsLogoBadPixels = []
 NationalsLogoBadPixels = []
