@@ -28,8 +28,8 @@ matrix.SetPixel(2, 3, 0, 0, 0)
 matrix.SetPixel(3, 2, 0, 0, 0)
 matrix.SetPixel(4, 1, 0, 0, 0)
 matrix.SetPixel(5, 1, 0, 0, 0)
-matrix.SetPixel(5, 0, 0, 0, 0)
-matrix.SetPixel(7, 0, 0, 0, 0)
+matrix.SetPixel(6, 0, 0, 0, 0)
+matrix.SetPixel(8, 0, 0, 0, 0)
 
 
 while True:
