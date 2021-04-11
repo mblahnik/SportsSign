@@ -36,42 +36,52 @@ matrix.SetPixel(img_x + 4, img_y + 1, 0, 0, 0)
 matrix.SetPixel(img_x + 5, img_y + 1, 0, 0, 0)
 matrix.SetPixel(img_x + 6, img_y + 0, 0, 0, 0)
 matrix.SetPixel(img_x + 8, img_y + 0, 0, 0, 0)
-
 matrix.SetPixel(img_x + 25, img_y + 0, 0, 0, 0)
 matrix.SetPixel(img_x + 26, img_y + 0, 0, 0, 0)
 matrix.SetPixel(img_x + 27, img_y + 1, 0, 0, 0)
 matrix.SetPixel(img_x + 28, img_y + 2, 0, 0, 0)
-
 matrix.SetPixel(img_x + 0, img_y + 17, 0, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 18, 0, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 19, 0, 0, 0)
-
 matrix.SetPixel(img_x + 1, img_y + 19, 0, 0, 0)
 matrix.SetPixel(img_x + 1, img_y + 20, 0, 0, 0)
 matrix.SetPixel(img_x + 1, img_y + 21, 0, 0, 0)
-
 matrix.SetPixel(img_x + 2, img_y + 22, 0, 0, 0)
 matrix.SetPixel(img_x + 2, img_y + 23, 0, 0, 0)
 matrix.SetPixel(img_x + 2, img_y + 24, 0, 0, 0)
-
 matrix.SetPixel(img_x + 3, img_y + 24, 0, 0, 0)
 matrix.SetPixel(img_x + 3, img_y + 25, 0, 0, 0)
-
 matrix.SetPixel(img_x + 4, img_y + 26, 0, 0, 0)
 matrix.SetPixel(img_x + 4, img_y + 27, 0, 0, 0)
-
-# I am here
 matrix.SetPixel(img_x + 5, img_y + 27, 0, 0, 0)
 matrix.SetPixel(img_x + 5, img_y + 28, 0, 0, 0)
-
 matrix.SetPixel(img_x + 6, img_y + 27, 0, 0, 0)
 matrix.SetPixel(img_x + 6, img_y + 28, 0, 0, 0)
 matrix.SetPixel(img_x + 6, img_y + 29, 0, 0, 0)
-
 matrix.SetPixel(img_x + 7, img_y + 28, 0, 0, 0)
 matrix.SetPixel(img_x + 7, img_y + 29, 0, 0, 0)
-
 matrix.SetPixel(img_x + 8, img_y + 30, 0, 0, 0)
+
+# dasd
+matrix.SetPixel(img_x + 22, img_y + 30, 0, 0, 0)
+
+matrix.SetPixel(img_x + 23, img_y + 29, 0, 0, 0)
+
+matrix.SetPixel(img_x + 24, img_y + 28, 0, 0, 0)
+
+matrix.SetPixel(img_x + 25, img_y + 27, 0, 0, 0)
+matrix.SetPixel(img_x + 25, img_y + 25, 0, 0, 0)
+
+matrix.SetPixel(img_x + 26, img_y + 26, 0, 0, 0)
+matrix.SetPixel(img_x + 26, img_y + 25, 0, 0, 0)
+
+matrix.SetPixel(img_x + 27, img_y + 24, 0, 0, 0)
+matrix.SetPixel(img_x + 27, img_y + 23, 0, 0, 0)
+matrix.SetPixel(img_x + 27, img_y + 22, 0, 0, 0)
+
+matrix.SetPixel(img_x + 28, img_y + 22, 0, 0, 0)
+matrix.SetPixel(img_x + 28, img_y + 23, 0, 0, 0)
+matrix.SetPixel(img_x + 28, img_y + 24, 0, 0, 0)
 
 
 while True:
