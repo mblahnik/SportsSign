@@ -66,7 +66,7 @@ class MLBSceneRenderer:
         self.buffer = self.matrix.SwapOnVSync(self.buffer)
 
     def cleanUpLogos(self, scene):
-        if scene.scene.Away_Team_Logo_Image.filename == "Brewers.png":
+        if scene.Away_Team_Logo_Image.filename == "Brewers.png":
             self.buffer.SetPixel(0, 36, 0, 0, 0)
             self.buffer.SetPixel(1, 35, 0, 0, 0)
             self.buffer.SetPixel(2, 34, 0, 0, 0)
