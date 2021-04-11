@@ -29,7 +29,7 @@ image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 matrix.SetImage(image.convert('RGB'), img_x, img_y)
 #matrix.Fill(255, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
-matrix.SetPixel(img_x + 0, img_y + 4, 0, 0, 0)
+matrix.SetPixel(img_x + 1, img_y + 4, 0, 0, 0)
 matrix.SetPixel(img_x + 2, img_y + 3, 0, 0, 0)
 matrix.SetPixel(img_x + 3, img_y + 2, 0, 0, 0)
 matrix.SetPixel(img_x + 4, img_y + 1, 0, 0, 0)
@@ -45,6 +45,20 @@ matrix.SetPixel(img_x + 28, img_y + 2, 0, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 17, 0, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 18, 0, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 19, 0, 0, 0)
+
+matrix.SetPixel(img_x + 1, img_y + 19, 0, 0, 0)
+matrix.SetPixel(img_x + 1, img_y + 20, 0, 0, 0)
+matrix.SetPixel(img_x + 1, img_y + 21, 0, 0, 0)
+
+matrix.SetPixel(img_x + 2, img_y + 22, 0, 0, 0)
+matrix.SetPixel(img_x + 2, img_y + 23, 0, 0, 0)
+matrix.SetPixel(img_x + 2, img_y + 24, 0, 0, 0)
+
+matrix.SetPixel(img_x + 3, img_y + 24, 0, 0, 0)
+matrix.SetPixel(img_x + 3, img_y + 25, 0, 0, 0)
+
+matrix.SetPixel(img_x + 4, img_y + 26, 0, 0, 0)
+matrix.SetPixel(img_x + 4, img_y + 27, 0, 0, 0)
 
 
 while True:
