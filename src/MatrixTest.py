@@ -79,7 +79,7 @@ matrix.SetPixel(img_x + 27, img_y + 24, 0, 0, 0)
 matrix.SetPixel(img_x + 27, img_y + 23, 0, 0, 0)
 matrix.SetPixel(img_x + 27, img_y + 22, 0, 0, 0)
 
-matrix.SetPixel(img_x + 28, img_y + 22, 0, 0, 0)
+matrix.SetPixel(img_x + 28, img_y + 21, 0, 0, 0)
 matrix.SetPixel(img_x + 28, img_y + 23, 0, 0, 0)
 matrix.SetPixel(img_x + 28, img_y + 24, 0, 0, 0)
 
