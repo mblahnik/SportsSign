@@ -39,8 +39,7 @@ AngelsLogoBadPixels = [Pixel(0, 24), Pixel(
     Pixel(21, 27), Pixel(21, 26), Pixel(22, 30), Pixel(22, 29)]
 
 AstrosLogoBadPixels = [Pixel(0, 6), Pixel(0, 7), Pixel(0, 9), Pixel(0, 21), Pixel(0, 23), Pixel(0, 24),
-                       Pixel(1, 6), Pixel(1, 7), Pixel(
-                           1, 9), Pixel(1, 21), Pixel(1, 23),
+                       Pixel(1, 5), Pixel(1, 7), Pixel(1, 25),
                        Pixel(2, 4), Pixel(2, 26), Pixel(3, 3), Pixel(4, 2), Pixel(5, 1), Pixel(6, 0)]
 
 
