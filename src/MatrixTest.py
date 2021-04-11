@@ -18,8 +18,8 @@ buffer = matrix.CreateFrameCanvas()
 
 image = Image.open("./TeamLogos/MLB/Brewers.png")
 
-img_x = 0
-img_y = 0
+img_x = 32
+img_y = 32
 
 image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
@@ -61,24 +61,16 @@ matrix.SetPixel(img_x + 6, img_y + 29, 0, 0, 0)
 matrix.SetPixel(img_x + 7, img_y + 28, 0, 0, 0)
 matrix.SetPixel(img_x + 7, img_y + 29, 0, 0, 0)
 matrix.SetPixel(img_x + 8, img_y + 30, 0, 0, 0)
-
-# dasd
 matrix.SetPixel(img_x + 22, img_y + 30, 0, 0, 0)
-
 matrix.SetPixel(img_x + 23, img_y + 29, 0, 0, 0)
-
 matrix.SetPixel(img_x + 24, img_y + 28, 0, 0, 0)
-
 matrix.SetPixel(img_x + 25, img_y + 27, 0, 0, 0)
 matrix.SetPixel(img_x + 25, img_y + 25, 0, 0, 0)
-
 matrix.SetPixel(img_x + 26, img_y + 26, 0, 0, 0)
 matrix.SetPixel(img_x + 26, img_y + 25, 0, 0, 0)
-
 matrix.SetPixel(img_x + 27, img_y + 24, 0, 0, 0)
 matrix.SetPixel(img_x + 27, img_y + 23, 0, 0, 0)
 matrix.SetPixel(img_x + 27, img_y + 22, 0, 0, 0)
-
 matrix.SetPixel(img_x + 28, img_y + 21, 0, 0, 0)
 matrix.SetPixel(img_x + 28, img_y + 22, 0, 0, 0)
 matrix.SetPixel(img_x + 28, img_y + 23, 0, 0, 0)
