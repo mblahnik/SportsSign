@@ -121,7 +121,9 @@ NationalsLogoBadPixels = [Pixel(0, 6), Pixel(0, 7), Pixel(1, 5), Pixel(2, 4), Pi
                               2, 25), Pixel(3, 26), Pixel(3, 27), Pixel(4, 28), Pixel(5, 29),
                           Pixel(16, 29), Pixel(17, 28), Pixel(18, 29), Pixel(19, 29), Pixel(20, 29), Pixel(
                               21, 29), Pixel(22, 28), Pixel(23, 28), Pixel(24, 27), Pixel(26, 26), Pixel(26, 25),
-                          Pixel(27, 25)]
+                          Pixel(27, 25), Pixel(30, 0), Pixel(30, 1), Pixel(
+                              30, 19), Pixel(30, 20), Pixel(29, 21), Pixel(29, 22),
+                          Pixel(28, 23), Pixel(28, 24), Pixel(27, 24)]
 OriolesLogoBadPixels = []
 PhilliesLogoBadPixels = []
 RangersLogoBadPixels = []
