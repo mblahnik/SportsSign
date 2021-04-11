@@ -4,7 +4,7 @@ from PIL import Image
 x = os.path.dirname(os.path.abspath(__file__))
 
 mydict = {'stl': 'Cardinals.png',
-          'cardnials': 'Cardinals.png',
+          'cardinals': 'Cardinals.png',
           'mil': 'Brewers.png',
           'brewers': 'Brewers.png',
           'chc': 'Cubs.png',
