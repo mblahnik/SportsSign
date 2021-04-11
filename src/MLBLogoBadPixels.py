@@ -58,13 +58,16 @@ CubsLogoBadPixels = []
 
 DiamondBacksBadPixels = []
 
+MarinersLogoBadPixels = []
+
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
              "Angels.png": AngelsLogoBadPixels,
              "Astros.png": AstrosLogoBadPixels,
              "BlueJays.png": BlueJaysLogoBadPixels,
              "Braves.png": BravesLogoBadPixels,
              "Cubs.png": CubsLogoBadPixels,
-             "DiamondBacks.png": DiamondBacksBadPixels}
+             "DiamondBacks.png": DiamondBacksBadPixels,
+             "Mariners.png": MarinersLogoBadPixels}
 
 
 def GetBadPixelList(teamLogoFileName):
