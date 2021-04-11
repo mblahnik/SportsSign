@@ -72,7 +72,13 @@ BravesLogoBadPixels = [Pixel(1, 18), Pixel(0, 28), Pixel(4, 21), Pixel(4, 20), P
     Pixel(28, 2), Pixel(28, 3), Pixel(27, 4), Pixel(26, 6), Pixel(26, 7), Pixel(
         27, 8), Pixel(25, 5), Pixel(24, 9), Pixel(23, 13), Pixel(26, 22),
     Pixel(25, 21), Pixel(25, 20), Pixel(24, 20), Pixel(26, 19), Pixel(27, 18), Pixel(29, 29), Pixel(25, 8), Pixel(29, 10), Pixel(30, 12), Pixel(30, 13), Pixel(29, 15), Pixel(29, 16), Pixel(28, 17)]
-CubsLogoBadPixels = []
+
+CubsLogoBadPixels = [Pixel(0, 6), Pixel(0, 7), Pixel(1, 5), Pixel(2, 4), Pixel(3, 3), Pixel(4, 2), Pixel(5, 1), Pixel(6, 0), Pixel(7, 0),
+                     Pixel(0, 21), Pixel(0, 23), Pixel(0, 24), Pixel(1, 25), Pixel(2, 26), Pixel(
+                         3, 27), Pixel(4, 28), Pixel(5, 29), Pixel(6, 30), Pixel(7, 30),
+                     Pixel(23, 0), Pixel(24, 0), Pixel(25, 1), Pixel(26, 2), Pixel(27, 3), Pixel(
+                         28, 4), Pixel(29, 5), Pixel(29, 7), Pixel(30, 6), Pixel(30, 7),
+                     Pixel(23, 30), Pixel(24, 30), Pixel(25, 29), Pixel(26, 28), Pixel(27, 27), Pixel(28, 26), Pixel(29, 25), Pixel(30, 24), Pixel(30, 23)]
 DiamondBacksBadPixels = []
 MarinersLogoBadPixels = []
 MarlinsLogoBadPixels = []
