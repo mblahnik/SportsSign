@@ -23,6 +23,7 @@ class MLBSceneGenerator:
             split = upComingDateString.split(" ")
             firstline = ""
             secondline = ""
+            scene.AdditionalText = []
             for line in split[:3]:
                 firstline += line + " "
             for linme in split[3:]:
