@@ -46,7 +46,7 @@ class MLBSceneRenderer:
         if scene.MainText:
             textFont = graphics.Font()
             if len(scene.MainText) >= 10:
-                textFont.LoadFont(x + "/fonts/5x8.bdf")
+                textFont.LoadFont(x + "/fonts/4x6.bdf")
             else:
                 textFont.LoadFont(x + "/fonts/6x13.bdf")
             positionOffset = (len(scene.MainText)/2) * 6

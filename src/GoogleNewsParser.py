@@ -30,7 +30,6 @@ class GoogleNewsParser:
         cards = self.soup.find_all('div', class_='SOsZve')
         self.card = cards[len(cards)-1]
         self.UpcomingGameCard = self.soup.find('div', class_='LI3zEe uP1HId')
-        print(self.UpcomingGameCard)
 
     def GetHomeTeamLogo(self):
         hometeamName = self.card.findAll('div', class_='MlH7je')[
@@ -70,11 +69,9 @@ class GoogleNewsParser:
     def GetUpcomingGameHomeTeamLogo(self):
         homeTeamName = self.UpcomingGameCard.find_all(
             'div', class_='MlH7je')[0].string.lower()
-        print(homeTeamName)
         return GetMLBTeamLogoImage(homeTeamName)
 
     def GetUpcomingGameAwayTeamLogo(self):
         awayTeamName = self.UpcomingGameCard.find_all(
             'div', class_='MlH7je')[1].string.lower()
-        print(awayTeamName)
         return GetMLBTeamLogoImage(awayTeamName)
