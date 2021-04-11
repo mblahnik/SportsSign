@@ -2,8 +2,14 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 import time
 import os
+from MLBLogoBadPixels import GetBadPixelList
 
 x = os.path.dirname(os.path.abspath(__file__))
+
+Away_Team_Logo_X = -2
+Away_Team_Logo_y = 33
+Home_Team_Logo_X = 37
+Home_Team_Logo_y = 33
 
 
 class MLBSceneRenderer:
@@ -40,8 +46,10 @@ class MLBSceneRenderer:
         graphics.DrawText(self.buffer, bigfont, 32-scorePositionOffset,
                           32, textColor, score)
         graphics.DrawText(self.buffer, font, 29, 50, textColor, my_text)
-        self.buffer.SetImage(scene.Away_Team_Logo_Image.convert('RGB'), -2, 33)
-        self.buffer.SetImage(scene.Home_Team_Logo_Image.convert('RGB'), 37, 33)
+        self.buffer.SetImage(scene.Away_Team_Logo_Image.convert(
+            'RGB'), Away_Team_Logo_X, Away_Team_Logo_y)
+        self.buffer.SetImage(scene.Home_Team_Logo_Image.convert(
+            'RGB'), Home_Team_Logo_X, Home_Team_Logo_y)
 
         if scene.MainText:
             textFont = graphics.Font()
@@ -66,85 +74,19 @@ class MLBSceneRenderer:
         self.buffer = self.matrix.SwapOnVSync(self.buffer)
 
     def cleanUpLogos(self, scene):
-        if os.path.basename(scene.Away_Team_Logo_Image.filename) == "Brewers.png":
-            self.buffer.SetPixel(0, 36, 0, 0, 0)
-            self.buffer.SetPixel(1, 35, 0, 0, 0)
-            self.buffer.SetPixel(2, 34, 0, 0, 0)
-            self.buffer.SetPixel(3, 34, 0, 0, 0)
-            self.buffer.SetPixel(4, 33, 0, 0, 0)
-            self.buffer.SetPixel(23, 33, 0, 0, 0)
-            self.buffer.SetPixel(24, 33, 0, 0, 0)
-            self.buffer.SetPixel(25, 34, 0, 0, 0)
-            self.buffer.SetPixel(26, 35, 0, 0, 0)
-            self.buffer.SetPixel(0, 57, 0, 0, 0)
-            self.buffer.SetPixel(0, 56, 0, 0, 0)
-            self.buffer.SetPixel(0, 55, 0, 0, 0)
-            self.buffer.SetPixel(1, 57, 0, 0, 0)
-            self.buffer.SetPixel(1, 58, 0, 0, 0)
-            self.buffer.SetPixel(2, 57, 0, 0, 0)
-            self.buffer.SetPixel(2, 59, 0, 0, 0)
-            self.buffer.SetPixel(2, 60, 0, 0, 0)
-            self.buffer.SetPixel(3, 61, 0, 0, 0)
-            self.buffer.SetPixel(3, 60, 0, 0, 0)
-            self.buffer.SetPixel(4, 62, 0, 0, 0)
-            self.buffer.SetPixel(4, 61, 0, 0, 0)
-            self.buffer.SetPixel(4, 60, 0, 0, 0)
-            self.buffer.SetPixel(5, 61, 0, 0, 0)
-            self.buffer.SetPixel(5, 62, 0, 0, 0)
-            self.buffer.SetPixel(6, 63, 0, 0, 0)
-            self.buffer.SetPixel(20, 63, 0, 0, 0)
-            self.buffer.SetPixel(21, 62, 0, 0, 0)
-            self.buffer.SetPixel(22, 61, 0, 0, 0)
-            self.buffer.SetPixel(23, 60, 0, 0, 0)
-            self.buffer.SetPixel(23, 58, 0, 0, 0)
-            self.buffer.SetPixel(24, 58, 0, 0, 0)
-            self.buffer.SetPixel(24, 59, 0, 0, 0)
-            self.buffer.SetPixel(25, 57, 0, 0, 0)
-            self.buffer.SetPixel(25, 56, 0, 0, 0)
-            self.buffer.SetPixel(25, 54, 0, 0, 0)
-            self.buffer.SetPixel(26, 54, 0, 0, 0)
-            self.buffer.SetPixel(26, 55, 0, 0, 0)
-            self.buffer.SetPixel(26, 56, 0, 0, 0)
+        AwayTeamBadPixelList = GetBadPixelList(
+            os.path.basename(scene.Away_Team_Logo_Image.filename))
 
-        if os.path.basename(scene.Home_Team_Logo_Image.filename) == "Brewers.png":
-            self.buffer.SetPixel(39, 36, 0, 0, 0)
-            self.buffer.SetPixel(40, 35, 0, 0, 0)
-            self.buffer.SetPixel(41, 34, 0, 0, 0)
-            self.buffer.SetPixel(42, 34, 0, 0, 0)
-            self.buffer.SetPixel(44, 33, 0, 0, 0)
-            self.buffer.SetPixel(62, 33, 0, 0, 0)
-            self.buffer.SetPixel(63, 33, 0, 0, 0)
-            self.buffer.SetPixel(64, 34, 0, 0, 0)
-            self.buffer.SetPixel(65, 35, 0, 0, 0)
-            self.buffer.SetPixel(0, 57, 0, 0, 0)
-            self.buffer.SetPixel(0, 56, 0, 0, 0)
-            self.buffer.SetPixel(0, 55, 0, 0, 0)
-            self.buffer.SetPixel(1, 57, 0, 0, 0)
-            self.buffer.SetPixel(1, 58, 0, 0, 0)
-            self.buffer.SetPixel(2, 57, 0, 0, 0)
-            self.buffer.SetPixel(2, 59, 0, 0, 0)
-            self.buffer.SetPixel(2, 60, 0, 0, 0)
-            self.buffer.SetPixel(3, 61, 0, 0, 0)
-            self.buffer.SetPixel(3, 60, 0, 0, 0)
-            self.buffer.SetPixel(4, 62, 0, 0, 0)
-            self.buffer.SetPixel(4, 61, 0, 0, 0)
-            self.buffer.SetPixel(4, 60, 0, 0, 0)
-            self.buffer.SetPixel(5, 61, 0, 0, 0)
-            self.buffer.SetPixel(5, 62, 0, 0, 0)
-            self.buffer.SetPixel(6, 63, 0, 0, 0)
-            self.buffer.SetPixel(20, 63, 0, 0, 0)
-            self.buffer.SetPixel(21, 62, 0, 0, 0)
-            self.buffer.SetPixel(22, 61, 0, 0, 0)
-            self.buffer.SetPixel(23, 60, 0, 0, 0)
-            self.buffer.SetPixel(23, 58, 0, 0, 0)
-            self.buffer.SetPixel(24, 58, 0, 0, 0)
-            self.buffer.SetPixel(24, 59, 0, 0, 0)
-            self.buffer.SetPixel(25, 57, 0, 0, 0)
-            self.buffer.SetPixel(25, 56, 0, 0, 0)
-            self.buffer.SetPixel(25, 54, 0, 0, 0)
-            self.buffer.SetPixel(26, 54, 0, 0, 0)
-            self.buffer.SetPixel(26, 55, 0, 0, 0)
-            self.buffer.SetPixel(26, 56, 0, 0, 0)
+        HomeTeamBadPixelList = GetBadPixelList(
+            os.path.basename(scene.Home_Team_Logo_Image.filename))
+
+        for pixel in AwayTeamBadPixelList:
+            self.buffer.SetPixel(Away_Team_Logo_X + pixel.x,
+                                 Away_Team_Logo_y + pixel.y, 0, 0, 0)
+
+        for pixel in HomeTeamBadPixelList:
+            self.buffer.SetPixel(Home_Team_Logo_X + pixel.x,
+                                 Home_Team_Logo_y + pixel.y, 0, 0, 0)
 
     def printText(self, text):
         self.buffer.Clear()
