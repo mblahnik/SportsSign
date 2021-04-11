@@ -104,7 +104,6 @@ teamsDict = {"Brewers.png": BrewersLogoBadPixels,
 
 
 def GetBadPixelList(teamLogoFileName):
-
     if teamLogoFileName in teamsDict:
         return teamsDict[teamLogoFileName]
     else:
