@@ -20,8 +20,6 @@ def main():
             time.sleep(30)
         except KeyboardInterrupt:
             quit()
-        except:
-            print("Trying again...")
 
 
 if __name__ == "__main__":
