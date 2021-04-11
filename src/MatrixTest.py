@@ -18,7 +18,7 @@ buffer = matrix.CreateFrameCanvas()
 
 image = Image.open("./TeamLogos/MLB/Brewers.png")
 
-image.thumbnail((matrix.width-32, matrix.height-32))
+image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
 matrix.SetImage(image.convert('RGB'))
 #matrix.Fill(255, 0, 0)
