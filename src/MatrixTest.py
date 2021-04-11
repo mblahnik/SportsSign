@@ -22,7 +22,15 @@ image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
 matrix.SetImage(image.convert('RGB'), 0, 0)
 #matrix.Fill(255, 0, 0)
-matrix.SetPixel(0, 0, 0, 0, 0)
+matrix.SetPixel(0, 5, 0, 0, 0)
+matrix.SetPixel(1, 4, 0, 0, 0)
+matrix.SetPixel(2, 3, 0, 0, 0)
+matrix.SetPixel(3, 2, 0, 0, 0)
+matrix.SetPixel(4, 1, 0, 0, 0)
+matrix.SetPixel(5, 1, 0, 0, 0)
+matrix.SetPixel(5, 0, 0, 0, 0)
+matrix.SetPixel(7, 0, 0, 0, 0)
+
 
 while True:
     x = 1
