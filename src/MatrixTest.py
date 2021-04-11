@@ -23,6 +23,9 @@ img_y = 32
 
 image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
+matrix.SetImage(image.convert('RGB'), 0, 0)
+
+
 matrix.SetImage(image.convert('RGB'), img_x, img_y)
 #matrix.Fill(255, 0, 0)
 matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
