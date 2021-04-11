@@ -61,43 +61,52 @@ class MLBSceneRenderer:
                                   y_pos, textColor, line)
                 y_pos = y_pos + 8
 
-        self.cleanUpLogos()
+        self.cleanUpLogos(scene)
 
         self.buffer = self.matrix.SwapOnVSync(self.buffer)
 
-    def cleanUpLogos(self):
-        self.buffer.SetPixel(0, 36, 0, 0, 0)
-        self.buffer.SetPixel(1, 35, 0, 0, 0)
-        self.buffer.SetPixel(2, 34, 0, 0, 0)
-        self.buffer.SetPixel(3, 34, 0, 0, 0)
-        self.buffer.SetPixel(4, 33, 0, 0, 0)
-        self.buffer.SetPixel(23, 33, 0, 0, 0)
-        self.buffer.SetPixel(24, 33, 0, 0, 0)
-        self.buffer.SetPixel(25, 34, 0, 0, 0)
-        self.buffer.SetPixel(26, 35, 0, 0, 0)
+    def cleanUpLogos(self, scene):
+        if scene.scene.Away_Team_Logo_Image.filename == "Brewers.png":
+            self.buffer.SetPixel(0, 36, 0, 0, 0)
+            self.buffer.SetPixel(1, 35, 0, 0, 0)
+            self.buffer.SetPixel(2, 34, 0, 0, 0)
+            self.buffer.SetPixel(3, 34, 0, 0, 0)
+            self.buffer.SetPixel(4, 33, 0, 0, 0)
+            self.buffer.SetPixel(23, 33, 0, 0, 0)
+            self.buffer.SetPixel(24, 33, 0, 0, 0)
+            self.buffer.SetPixel(25, 34, 0, 0, 0)
+            self.buffer.SetPixel(26, 35, 0, 0, 0)
+            self.buffer.SetPixel(0, 57, 0, 0, 0)
+            self.buffer.SetPixel(0, 56, 0, 0, 0)
+            self.buffer.SetPixel(0, 55, 0, 0, 0)
+            self.buffer.SetPixel(1, 57, 0, 0, 0)
+            self.buffer.SetPixel(1, 58, 0, 0, 0)
+            self.buffer.SetPixel(2, 57, 0, 0, 0)
+            self.buffer.SetPixel(2, 59, 0, 0, 0)
+            self.buffer.SetPixel(2, 60, 0, 0, 0)
+            self.buffer.SetPixel(3, 61, 0, 0, 0)
+            self.buffer.SetPixel(3, 60, 0, 0, 0)
+            self.buffer.SetPixel(4, 62, 0, 0, 0)
+            self.buffer.SetPixel(4, 61, 0, 0, 0)
+            self.buffer.SetPixel(4, 60, 0, 0, 0)
+            self.buffer.SetPixel(5, 61, 0, 0, 0)
+            self.buffer.SetPixel(5, 62, 0, 0, 0)
+            self.buffer.SetPixel(6, 63, 0, 0, 0)
 
-        self.buffer.SetPixel(0, 57, 0, 0, 0)
-        self.buffer.SetPixel(0, 56, 0, 0, 0)
-        self.buffer.SetPixel(0, 55, 0, 0, 0)
+            self.buffer.SetPixel(20, 63, 0, 0, 0)
 
-        self.buffer.SetPixel(1, 57, 0, 0, 0)
-        self.buffer.SetPixel(1, 58, 0, 0, 0)
-
-        self.buffer.SetPixel(2, 57, 0, 0, 0)
-        self.buffer.SetPixel(2, 59, 0, 0, 0)
-        self.buffer.SetPixel(2, 60, 0, 0, 0)
-
-        self.buffer.SetPixel(3, 61, 0, 0, 0)
-        self.buffer.SetPixel(3, 60, 0, 0, 0)
-
-        self.buffer.SetPixel(4, 62, 0, 0, 0)
-        self.buffer.SetPixel(4, 61, 0, 0, 0)
-        self.buffer.SetPixel(4, 60, 0, 0, 0)
-
-        self.buffer.SetPixel(5, 61, 0, 0, 0)
-        self.buffer.SetPixel(5, 62, 0, 0, 0)
-
-        self.buffer.SetPixel(6, 63, 0, 0, 0)
+            self.buffer.SetPixel(21, 62, 0, 0, 0)
+            self.buffer.SetPixel(22, 61, 0, 0, 0)
+            self.buffer.SetPixel(23, 60, 0, 0, 0)
+            self.buffer.SetPixel(23, 58, 0, 0, 0)
+            self.buffer.SetPixel(24, 58, 0, 0, 0)
+            self.buffer.SetPixel(24, 59, 0, 0, 0)
+            self.buffer.SetPixel(25, 57, 0, 0, 0)
+            self.buffer.SetPixel(25, 56, 0, 0, 0)
+            self.buffer.SetPixel(25, 54, 0, 0, 0)
+            self.buffer.SetPixel(26, 54, 0, 0, 0)
+            self.buffer.SetPixel(26, 55, 0, 0, 0)
+            self.buffer.SetPixel(26, 56, 0, 0, 0)
 
     def printText(self, text):
         self.buffer.Clear()
