@@ -68,7 +68,8 @@ class GoogleNewsParser:
     def GetUpcomingGameHomeTeamLogo(self):
         homeTeamName = self.UpcomingGameCard.find_all(
             'div', class_='MlH7je')[0].string.lower()
-        return GetMLBTeamLogoImage(homeTeamName)
+        return GetMLBTeamLogoImage("brewers")
+        # return GetMLBTeamLogoImage(homeTeamName)
 
     def GetUpcomingGameAwayTeamLogo(self):
         awayTeamName = self.UpcomingGameCard.find_all(
