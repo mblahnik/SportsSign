@@ -35,10 +35,6 @@ class GoogleNewsParser:
         hometeamName = self.card.findAll('div', class_='MlH7je')[
             1].string.lower()
         return GetMLBTeamLogoImage(hometeamName)
-        #TeamLogos = self.card.find_all('img')
-        #Home_Team_Logo_URL = TeamLogos[self.Home_Team_Index]['src']
-        # return Image.open("./TeamLogos/MLB/Brewers.png")
-        # return Image.open(requests.get(Home_Team_Logo_URL, stream=True).raw)
 
     def GetHomeTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
@@ -48,10 +44,6 @@ class GoogleNewsParser:
         awayteamName = self.card.findAll('div', class_='MlH7je')[
             0].string.lower()
         return GetMLBTeamLogoImage(awayteamName)
-        #TeamLogos = self.card.find_all('img')
-        #Away_Team_Logo_URL = TeamLogos[self.Away_Team_Index]['src']
-        # return Image.open("./TeamLogos/MLB/Twins.png")
-        # return Image.open(requests.get(Away_Team_Logo_URL, stream=True).raw)
 
     def GetAwayTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
@@ -72,14 +64,14 @@ class GoogleNewsParser:
         return AdditionalText
 
     def GetUpcomingGameDate(self):
-        Date = self.UpcomingGameCard.find('div', class_='fMAqYb').string
+        return self.UpcomingGameCard.find('div', class_='fMAqYb').string
 
     def GetUpcomingGameHomeTeamLogo(self):
         homeTeamName = self.UpcomingGameCard.find_all(
-            'div', class_='MlH7je')[0].string
-        print("")
+            'div', class_='MlH7je')[0].string.lower()
+        return GetMLBTeamLogoImage(homeTeamName)
 
     def GetUpcomingGameAwayTeamLogo(self):
-        homeTeamName = self.UpcomingGameCard.find_all(
-            'div', class_='MlH7je')[1].string
-        print("")
+        awayTeamName = self.UpcomingGameCard.find_all(
+            'div', class_='MlH7je')[1].string.lower()
+        return GetMLBTeamLogoImage(awayTeamName)

@@ -4,11 +4,12 @@ import requests
 import time
 from Scene import Scene
 from MLBSceneRenderer import MLBSceneRenderer
-from GoogleNewsParser import GoogleNewsParser
+from MLBSceneGenerator import MLBSceneGenerator
 
 
 def main():
 
+    sceneGenerator = MLBSceneGenerator()
     sceneRenderer = MLBSceneRenderer()
     parser = GoogleNewsParser()
 
@@ -16,22 +17,13 @@ def main():
 
     while True:
         try:
-            parser.LoadPage()
-
-            scene = Scene()
-            scene.Home_Team_Logo_Image = parser.GetHomeTeamLogo()
-            scene.Away_Team_Logo_Image = parser.GetAwayTeamLogo()
-            scene.Home_Team_Score = parser.GetHomeTeamScore()
-            scene.Away_Team_Score = parser.GetAwayTeamScore()
-            scene.InningText = parser.GetInning()
-            scene.AdditionalText = parser.GetAdditionalText()
-
+            scene = sceneGenerator.GetScene()
             sceneRenderer.RenderScene(scene)
             time.sleep(30)
         except KeyboardInterrupt:
             quit()
-        except TimeoutError:
-            print("Request taking too long, starting over")
+        except:
+            print("Trying again...")
 
 
 if __name__ == "__main__":
