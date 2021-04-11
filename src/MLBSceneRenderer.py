@@ -45,19 +45,22 @@ class MLBSceneRenderer:
 
         if scene.MainText:
             textFont = graphics.Font()
-            font.LoadFont(x + "/fonts/6x13.bdf")
+            if len(scene.MainText) >= 10:
+                textFont.LoadFont(x + "/fonts/5x8.bdf")
+            else:
+                textFont.LoadFont(x + "/fonts/6x13.bdf")
             positionOffset = (len(scene.MainText)/2) * 6
-            graphics.DrawText(self.buffer, font, 32-positionOffset,
+            graphics.DrawText(self.buffer, textFont, 32-positionOffset,
                               13, textColor, scene.MainText)
         else:
             textFont = graphics.Font()
-            font.LoadFont(x + "/fonts/5x7.bdf")
+            textFont.LoadFont(x + "/fonts/5x7.bdf")
             y_pos = 7
             for line in scene.AdditionalText:
                 positionOffset = (len(line)/2) * 4
                 if len(line) % 2 == 0:
                     positionOffset += 4
-                graphics.DrawText(self.buffer, font, 32-positionOffset,
+                graphics.DrawText(self.buffer, textFont, 32-positionOffset,
                                   y_pos, textColor, line)
                 y_pos = y_pos + 8
 
