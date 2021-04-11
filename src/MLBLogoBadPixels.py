@@ -147,7 +147,11 @@ OriolesLogoBadPixels = [Pixel(0, 5), Pixel(0, 6), Pixel(1, 4), Pixel(1, 3), Pixe
                         Pixel(25, 23), Pixel(25, 22), Pixel(25, 21), Pixel(25, 19), Pixel(26, 20), Pixel(26, 18), Pixel(27, 18), Pixel(27, 17), Pixel(28, 17), Pixel(29, 17), Pixel(30, 15)]
 
 PhilliesLogoBadPixels = [Pixel(0, 3), Pixel(0, 4), Pixel(1, 2), Pixel(2, 1), Pixel(3, 0), Pixel(4, 0), Pixel(0, 14), Pixel(1, 15), Pixel(2, 16), Pixel(3, 16),
-                         Pixel(4, 16), Pixel(5, 16), Pixel(6, 15), Pixel(5, 17), Pixel(5, 18), Pixel(5, 19), Pixel(5, 20), Pixel(5, 21), Pixel(5, 22), Pixel(5, 23)]
+                         Pixel(4, 16), Pixel(5, 16), Pixel(6, 15), Pixel(5, 17), Pixel(5, 18), Pixel(
+                             5, 19), Pixel(5, 20), Pixel(5, 21), Pixel(5, 22), Pixel(5, 23),
+                         Pixel(20, 0), Pixel(21, 1), Pixel(22, 1), Pixel(22, 2), Pixel(23, 3), Pixel(
+                             23, 4), Pixel(6, 22), Pixel(4, 24), Pixel(4, 25), Pixel(3, 25),
+                         Pixel(3, 26), Pixel(3, 27), Pixel(3, 28), Pixel(3, 29), Pixel(4, 29), Pixel(4, 30)]
 RangersLogoBadPixels = []
 RaysLogoBadPixels = []
 RedsLogoBadPixels = []
