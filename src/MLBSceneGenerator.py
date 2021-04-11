@@ -25,7 +25,7 @@ class MLBSceneGenerator:
         else:
             print("Showing current game")
             scene.Home_Team_Logo_Image = self.dataSource.GetHomeTeamLogo()
-            scene.Away_Team_Logo_Image = self.dataSource.GetAwayTeamScore()
+            scene.Away_Team_Logo_Image = self.dataSource.GetAwayTeamLogo()
             scene.Home_Team_Score = self.dataSource.GetHomeTeamScore()
             scene.Away_Team_Score = self.dataSource.GetAwayTeamScore()
             scene.MainText = self.dataSource.GetInning()
