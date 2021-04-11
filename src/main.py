@@ -11,8 +11,6 @@ def main():
 
     sceneGenerator = MLBSceneGenerator()
     sceneRenderer = MLBSceneRenderer()
-    parser = GoogleNewsParser()
-
     sceneRenderer.printText("Loading...")
 
     while True:
