@@ -18,8 +18,8 @@ buffer = matrix.CreateFrameCanvas()
 
 image = Image.open("./TeamLogos/MLB/Angels.png")
 
-img_x = 32
-img_y = 32
+img_x = 0
+img_y = 0
 
 image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
@@ -28,7 +28,7 @@ image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
 matrix.SetImage(image.convert('RGB'), img_x, img_y)
 #matrix.Fill(255, 0, 0)
-matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
+#matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
 
 
 while True:
