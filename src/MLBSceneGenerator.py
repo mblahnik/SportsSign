@@ -41,4 +41,4 @@ class MLBSceneGenerator:
         nextGameDate = datetime.datetime(
             year, dateDict[dateSplit[1]], int(dateSplit[2]))
 
-        return currentDate == nextGameDate
+        return currentDate.date() == nextGameDate.date()
