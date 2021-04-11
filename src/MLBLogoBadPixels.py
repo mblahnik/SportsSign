@@ -43,7 +43,7 @@ AstrosLogoBadPixels = [Pixel(0, 6), Pixel(0, 7), Pixel(0, 9), Pixel(0, 21), Pixe
                            1, 7), Pixel(1, 23), Pixel(1, 25), Pixel(2, 4), Pixel(3, 3), Pixel(4, 2), Pixel(5, 1), Pixel(6, 0), Pixel(2, 26),
                        Pixel(3, 27), Pixel(4, 28), Pixel(5, 29), Pixel(6, 30),
                        Pixel(24, 0), Pixel(25, 1), Pixel(26, 2), Pixel(
-                           27, 3), Pixel(28, 4), Pixel(29, 9)
+                           27, 3), Pixel(28, 4), Pixel(29, 9), Pixel(24, 30), Pixel(25, 29), Pixel(26, 28), Pixel(27, 27)
                        ]
 
 
