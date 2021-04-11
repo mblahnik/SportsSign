@@ -26,7 +26,7 @@ class GoogleNewsParser:
         end = page.text.find(
             "<h2 class=\"oOr8M  uP1HId Ir3o3e cS3HJf\" jsname=\"smh91d\">Standings")
         self.soup = BeautifulSoup(
-            page.content[start:end], 'html.parser', parse_only=parse_list)
+            page.content[start:end], 'html.parser')
         cards = self.soup.find_all('div', class_='SOsZve')
         self.card = cards[len(cards)-1]
         self.UpcomingGameCard = self.soup.find('div', class_='LI3zEe uP1HId')
