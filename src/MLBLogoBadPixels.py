@@ -33,7 +33,10 @@ AngelsLogoBadPixels = [Pixel(0, 24), Pixel(
     Pixel(18, 5), Pixel(18, 9), Pixel(18, 16), Pixel(19, 6),
     Pixel(19, 7), Pixel(19, 8), Pixel(19, 17), Pixel(
         19, 18), Pixel(19, 19), Pixel(19, 20),
-    Pixel(19, 21), Pixel(19, 22), Pixel(16, 14), Pixel(1, 21), Pixel(1, 22), Pixel(1, 23)]
+    Pixel(19, 21), Pixel(19, 22),
+    Pixel(20, 23), Pixel(20, 24), Pixel(20, 25), Pixel(20, 27), Pixel(
+        20, 29), Pixel(20, 30), Pixel(21, 30), Pixel(21, 29), Pixel(21, 28),
+    Pixel(21, 27), Pixel(21, 26), Pixel(22, 30), Pixel(22, 29)]
 
 
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
