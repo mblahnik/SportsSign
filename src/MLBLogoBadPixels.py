@@ -93,7 +93,9 @@ DiamondBacksBadPixels = [Pixel(0, 19), Pixel(0, 20), Pixel(1, 18), Pixel(1, 17),
 
 MarinersLogoBadPixels = [Pixel(0, 3), Pixel(0, 4), Pixel(1, 2), Pixel(2, 1), Pixel(
     3, 0), Pixel(0, 8), Pixel(0, 9), Pixel(0, 12), Pixel(0, 14), Pixel(0, 15), Pixel(0, 30),
-    Pixel(2, 17), Pixel(3, 17), Pixel(4, 18), Pixel(5, 18), Pixel(4, 19), Pixel(5, 19), Pixel(6, 19), Pixel(5, 20), Pixel(6, 21), Pixel(6, 22), Pixel(7, 24)]
+    Pixel(2, 17), Pixel(3, 17), Pixel(4, 18), Pixel(5, 18), Pixel(4, 19), Pixel(
+        5, 19), Pixel(6, 19), Pixel(5, 20), Pixel(6, 21), Pixel(6, 22), Pixel(7, 24),
+    Pixel(16, 12), Pixel(17, 12), Pixel(17, 14), Pixel(17, 15), Pixel(18, 14), Pixel(18, 15), Pixel(18, 17), Pixel(18, 25), Pixel(17, 26), Pixel(17, 27), Pixel(16, 28), Pixel(15, 29), Pixel(14, 30)]
 MarlinsLogoBadPixels = []
 MetsLogoBadPixels = []
 NationalsLogoBadPixels = []
