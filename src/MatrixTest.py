@@ -18,18 +18,21 @@ buffer = matrix.CreateFrameCanvas()
 
 image = Image.open("./TeamLogos/MLB/Brewers.png")
 
+img_x = 0
+img_y = 0
+
 image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
 
 matrix.SetImage(image.convert('RGB'), 0, 0)
 #matrix.Fill(255, 0, 0)
-matrix.SetPixel(0, 5, 0, 0, 0)
-matrix.SetPixel(1, 4, 0, 0, 0)
-matrix.SetPixel(2, 3, 0, 0, 0)
-matrix.SetPixel(3, 2, 0, 0, 0)
-matrix.SetPixel(4, 1, 0, 0, 0)
-matrix.SetPixel(5, 1, 0, 0, 0)
-matrix.SetPixel(6, 0, 0, 0, 0)
-matrix.SetPixel(8, 0, 0, 0, 0)
+matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
+matrix.SetPixel(img_x + 0, img_y + 1, 4, 0, 0, 0)
+matrix.SetPixel(img_x + 2, img_y + 3, 0, 0, 0)
+matrix.SetPixel(img_x + 3, img_y + 2, 0, 0, 0)
+matrix.SetPixel(img_x + 4, img_y + 1, 0, 0, 0)
+matrix.SetPixel(img_x + 5, img_y + 1, 0, 0, 0)
+matrix.SetPixel(img_x + 6, img_y + 0, 0, 0, 0)
+matrix.SetPixel(img_x + 8, img_y + 0, 0, 0, 0)
 
 
 while True:
