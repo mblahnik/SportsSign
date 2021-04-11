@@ -14,7 +14,8 @@ class MLBSceneGenerator:
     def GetScene(self):
         scene = Scene()
         self.dataSource.LoadPage()
-        upComingDateString = self.dataSource.GetUpcomingGameDate()
+        #upComingDateString = self.dataSource.GetUpcomingGameDate()
+        upComingDateString = "Sat, Apr 10 8:10 PM"
 
         if shouldDisplayUpComingGame(upComingDateString):
             scene.Home_Team_Logo_Image = self.dataSource.GetUpcomingGameHomeTeamLogo()
