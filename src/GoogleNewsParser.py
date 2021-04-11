@@ -33,7 +33,8 @@ class GoogleNewsParser:
     def GetHomeTeamLogo(self):
         hometeamName = self.card.findAll('div', class_='MlH7je')[
             1].string.lower()
-        return GetMLBTeamLogoImage(hometeamName)
+        return GetMLBTeamLogoImage("brewers")
+        # return GetMLBTeamLogoImage(hometeamName)
 
     def GetHomeTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
@@ -68,8 +69,7 @@ class GoogleNewsParser:
     def GetUpcomingGameHomeTeamLogo(self):
         homeTeamName = self.UpcomingGameCard.find_all(
             'div', class_='MlH7je')[0].string.lower()
-        return GetMLBTeamLogoImage("brewers")
-        # return GetMLBTeamLogoImage(homeTeamName)
+        return GetMLBTeamLogoImage(homeTeamName)
 
     def GetUpcomingGameAwayTeamLogo(self):
         awayTeamName = self.UpcomingGameCard.find_all(
