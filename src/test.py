@@ -13,7 +13,7 @@ currentDate = datetime.datetime.now()
 nextGameDate = datetime.datetime(
     year, dateDict[dateSplit[1]], int(dateSplit[2]))
 
-print(currentDate.date().day == nextGameDate.date().day and (
-    currentDate.date().month == nextGameDate.date().month) and currentDate.date().year == nextGameDate.date().year)
-print(currentDate.date())
-print(nextGameDate.date())
+print(dateSplit)
+
+print(dateSplit[:3])
+print(dateSplit[3:])

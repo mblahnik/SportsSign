@@ -19,15 +19,24 @@ class MLBSceneGenerator:
         if self.shouldDisplayUpComingGame(upComingDateString):
             scene.Home_Team_Logo_Image = self.dataSource.GetUpcomingGameHomeTeamLogo()
             scene.Away_Team_Logo_Image = self.dataSource.GetUpcomingGameAwayTeamLogo()
-            scene.MainText = upComingDateString
+            #scene.MainText = upComingDateString
+            split = upComingDateString.split(" ")
+            firstline = ""
+            secondline = ""
+            for line in split[:3]:
+                firstline += line + " "
+            for linme in split[3:]:
+                secondline += line + " "
+
+            scene.AdditionalText.append(firstline)
+            scene.AdditionalText.append(secondline)
         else:
             scene.Home_Team_Logo_Image = self.dataSource.GetHomeTeamLogo()
             scene.Away_Team_Logo_Image = self.dataSource.GetAwayTeamLogo()
             scene.Home_Team_Score = self.dataSource.GetHomeTeamScore()
             scene.Away_Team_Score = self.dataSource.GetAwayTeamScore()
             scene.MainText = self.dataSource.GetInning()
-
-        scene.AdditionalText = self.dataSource.GetAdditionalText()
+            scene.AdditionalText = self.dataSource.GetAdditionalText()
 
         return scene
 
