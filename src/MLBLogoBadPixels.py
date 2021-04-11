@@ -50,7 +50,10 @@ AstrosLogoBadPixels = [Pixel(0, 6), Pixel(0, 7), Pixel(0, 9), Pixel(0, 21), Pixe
                            29, 24), Pixel(29, 23), Pixel(29, 25), Pixel(28, 26)
                        ]
 
-BlueJaysLogoBadPixels = []
+BlueJaysLogoBadPixels = [Pixel(0, 7), Pixel(1, 7), Pixel(2, 7), Pixel(3, 6), Pixel(4, 6), Pixel(5, 6), Pixel(6, 5), Pixel(7, 5), Pixel(8, 4), Pixel(9, 3),
+                         Pixel(10, 2), Pixel(11, 2), Pixel(12, 2), Pixel(13, 2), Pixel(14, 2), Pixel(
+                             15, 2), Pixel(17, 1), Pixel(18, 1), Pixel(19, 1), Pixel(20, 0),
+                         Pixel(21, 0)]
 BravesLogoBadPixels = []
 CubsLogoBadPixels = []
 DiamondBacksBadPixels = []
