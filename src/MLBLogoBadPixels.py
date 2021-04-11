@@ -23,8 +23,8 @@ AngelsLogoBadPixels = [Pixel(0, 24), Pixel(
     Pixel(2, 5), Pixel(2, 6), Pixel(2, 9), Pixel(2, 16), Pixel(2, 18), Pixel(
         2, 19), Pixel(3, 4), Pixel(3, 10), Pixel(3, 14), Pixel(3, 15),
     Pixel(3, 17), Pixel(3, 18), Pixel(4, 3), Pixel(5, 2), Pixel(6, 2), Pixel(
-        7, 0), Pixel(7, 1), Pixel(7, 2), Pixel(8, 1), Pixel(1, 23),
-    Pixel(0, 26), Pixel(0, 28), Pixel(0, 30), Pixel(1, 6), Pixel(1, 7), Pixel(
+        7, 0), Pixel(7, 1), Pixel(7, 2), Pixel(8, 1), Pixel(4, 11),
+    Pixel(4, 12), Pixel(4, 14), Pixel(0, 30), Pixel(1, 6), Pixel(1, 7), Pixel(
         1, 8), Pixel(1, 17), Pixel(1, 21), Pixel(1, 22), Pixel(1, 23),
     Pixel(0, 26), Pixel(0, 28), Pixel(0, 30), Pixel(1, 6), Pixel(1, 7), Pixel(
         1, 8), Pixel(1, 17), Pixel(1, 21), Pixel(1, 22), Pixel(1, 23),
