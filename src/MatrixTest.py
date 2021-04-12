@@ -16,7 +16,7 @@ matrix = RGBMatrix(options=options)
 buffer = matrix.CreateFrameCanvas()
 
 
-image = Image.open("./TeamLogos/MLB/Rays.png")
+image = Image.open("./TeamLogos/MLB/Reds.png")
 
 img_x = 0
 img_y = 0
@@ -30,7 +30,7 @@ matrix.SetImage(image.convert('RGB'), img_x, img_y)
 #matrix.Fill(255, 0, 0)
 #matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
 
-for pixel in GetBadPixelList("Rays.png"):
+for pixel in GetBadPixelList("Reds.png"):
     matrix.SetPixel(img_x + pixel.x, img_y + pixel.y, 0, 0, 0)
 
 while True:
