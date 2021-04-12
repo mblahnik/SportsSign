@@ -175,7 +175,9 @@ RangersLogoBadPixels = [Pixel(1, 13), Pixel(2, 13), Pixel(3, 13), Pixel(4, 13), 
                         Pixel(18, 16), Pixel(19, 16), Pixel(19, 17), Pixel(19, 18), Pixel(19, 19), Pixel(19, 20), Pixel(
                             19, 21), Pixel(19, 22), Pixel(19, 23), Pixel(20, 24), Pixel(21, 25), Pixel(22, 26),
                         Pixel(22, 27), Pixel(22, 28), Pixel(22, 29), Pixel(22, 30)]
-RaysLogoBadPixels = []
+
+RaysLogoBadPixels = [Pixel(0, 7), Pixel(1, 7), Pixel(2, 5), Pixel(3, 5), Pixel(3, 4), Pixel(4, 4), Pixel(6, 4), Pixel(5, 4), Pixel(5, 5), Pixel(5, 6), Pixel(5, 7),
+                     Pixel(5, 8), Pixel(5, 9), Pixel(5, 10), Pixel(5, 11), Pixel(5, 12), Pixel(5, 13), Pixel(5, 14), Pixel(5, 15), Pixel(5, 16), Pixel(6, 15)]
 RedsLogoBadPixels = []
 RedSoxLogoBadPixels = []
 TigersLogoBadPixels = []
