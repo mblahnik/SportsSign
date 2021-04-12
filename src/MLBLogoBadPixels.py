@@ -215,7 +215,9 @@ RedSoxLogoBadPixels = [Pixel(1, 8), Pixel(2, 8), Pixel(2, 7), Pixel(3, 7), Pixel
                            2, 22), Pixel(2, 23), Pixel(3, 19), Pixel(3, 23), Pixel(1, 22),
                        Pixel(11, 6), Pixel(11, 7), Pixel(10, 7), Pixel(10, 8), Pixel(11, 8), Pixel(
                            12, 8), Pixel(12, 9), Pixel(10, 9), Pixel(10, 10), Pixel(11, 10),
-                       Pixel(10, 20), Pixel(12, 20), Pixel(10, 21), Pixel(10, 22), Pixel(11, 22), Pixel(12, 22), Pixel(12, 21)]
+                       Pixel(10, 20), Pixel(12, 20), Pixel(10, 21), Pixel(
+                           10, 22), Pixel(11, 22), Pixel(12, 22), Pixel(12, 21),
+                       Pixel(11, 20), Pixel(11, 23), Pixel(11, 24)]
 TigersLogoBadPixels = []
 TwinsLogoBadPixels = []
 WhiteSoxLogoBadPixels = []
