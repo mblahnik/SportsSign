@@ -25,7 +25,7 @@ class MLBSceneGenerator:
             secondline = ""
             for line in split[:3]:
                 firstline += line + " "
-            for linme in split[3:]:
+            for line in split[3:]:
                 secondline += line + " "
 
             scene.AdditionalText.append(firstline)
