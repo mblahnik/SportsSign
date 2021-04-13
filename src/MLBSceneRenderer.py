@@ -35,7 +35,7 @@ class MLBSceneRenderer:
             (self.matrix.width-33, self.matrix.height-33), Image.ANTIALIAS)
 
         size = scene.Away_Team_Logo_Image.size
-        width = size(0)
+        width = size[0]
         Away_Team_Logo_X = 27 - width
 
         font = graphics.Font()
