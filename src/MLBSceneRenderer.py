@@ -6,7 +6,7 @@ from MLBLogoBadPixels import GetBadPixelList
 
 x = os.path.dirname(os.path.abspath(__file__))
 
-#Away_Team_Logo_X = -2
+Away_Team_Logo_X = None
 Away_Team_Logo_y = 33
 Home_Team_Logo_X = 37
 Home_Team_Logo_y = 33
