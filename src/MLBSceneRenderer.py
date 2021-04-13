@@ -6,16 +6,15 @@ from MLBLogoBadPixels import GetBadPixelList
 
 x = os.path.dirname(os.path.abspath(__file__))
 
-Away_Team_Logo_X = None
-Away_Team_Logo_y = 33
-Home_Team_Logo_X = 37
-Home_Team_Logo_y = 33
-
 
 class MLBSceneRenderer:
 
     def __init__(self):
         super().__init__()
+        self.Away_Team_Logo_X = 0
+        self.Away_Team_Logo_y = 33
+        self.Home_Team_Logo_X = 37
+        self.Home_Team_Logo_y = 33
         options = RGBMatrixOptions()
         options.rows = 32
         options.cols = 64
@@ -36,7 +35,7 @@ class MLBSceneRenderer:
 
         size = scene.Away_Team_Logo_Image.size
         width = size[0]
-        Away_Team_Logo_X = 27 - width
+        self.Away_Team_Logo_X = 27 - width
 
         font = graphics.Font()
         font.LoadFont(x + "/fonts/7x13.bdf")
@@ -51,9 +50,9 @@ class MLBSceneRenderer:
                           32, textColor, score)
         graphics.DrawText(self.buffer, font, 29, 50, textColor, my_text)
         self.buffer.SetImage(scene.Away_Team_Logo_Image.convert(
-            'RGB'), Away_Team_Logo_X, Away_Team_Logo_y)
+            'RGB'), self.Away_Team_Logo_X, self.Away_Team_Logo_y)
         self.buffer.SetImage(scene.Home_Team_Logo_Image.convert(
-            'RGB'), Home_Team_Logo_X, Home_Team_Logo_y)
+            'RGB'), self.Home_Team_Logo_X, self.Home_Team_Logo_y)
 
         if scene.MainText:
             textFont = graphics.Font()
@@ -85,12 +84,12 @@ class MLBSceneRenderer:
             os.path.basename(scene.Home_Team_Logo_Image.filename))
 
         for pixel in AwayTeamBadPixelList:
-            self.buffer.SetPixel(Away_Team_Logo_X + pixel.x,
-                                 Away_Team_Logo_y + pixel.y, 0, 0, 0)
+            self.buffer.SetPixel(self.Away_Team_Logo_X + pixel.x,
+                                 self.Away_Team_Logo_y + pixel.y, 0, 0, 0)
 
         for pixel in HomeTeamBadPixelList:
-            self.buffer.SetPixel(Home_Team_Logo_X + pixel.x,
-                                 Home_Team_Logo_y + pixel.y, 0, 0, 0)
+            self.buffer.SetPixel(self.Home_Team_Logo_X + pixel.x,
+                                 self.Home_Team_Logo_y + pixel.y, 0, 0, 0)
 
     def printText(self, text):
         self.buffer.Clear()
