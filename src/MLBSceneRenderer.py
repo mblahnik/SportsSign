@@ -6,7 +6,7 @@ from MLBLogoBadPixels import GetBadPixelList
 
 x = os.path.dirname(os.path.abspath(__file__))
 
-Away_Team_Logo_X = -2
+#Away_Team_Logo_X = -2
 Away_Team_Logo_y = 33
 Home_Team_Logo_X = 37
 Home_Team_Logo_y = 33
@@ -34,8 +34,9 @@ class MLBSceneRenderer:
         scene.Away_Team_Logo_Image.thumbnail(
             (self.matrix.width-33, self.matrix.height-33), Image.ANTIALIAS)
 
-        print(scene.Away_Team_Logo_Image.size)
-        print(scene.Home_Team_Logo_Image.size)
+        size = scene.Away_Team_Logo_Image.size
+        width = size(0)
+        Away_Team_Logo_X = 27 - width
 
         font = graphics.Font()
         font.LoadFont(x + "/fonts/7x13.bdf")
