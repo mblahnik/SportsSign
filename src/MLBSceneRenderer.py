@@ -34,8 +34,8 @@ class MLBSceneRenderer:
         scene.Away_Team_Logo_Image.thumbnail(
             (self.matrix.width-33, self.matrix.height-33), Image.ANTIALIAS)
 
-        print(scene.Away_Team_Logo_Image)
-        print(scene.Home_Team_Logo_Image)
+        print(scene.Away_Team_Logo_Image.size)
+        print(scene.Home_Team_Logo_Image.size)
 
         font = graphics.Font()
         font.LoadFont(x + "/fonts/7x13.bdf")
