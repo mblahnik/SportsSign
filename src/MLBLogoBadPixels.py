@@ -277,10 +277,10 @@ TwinsLogoBadPixels = [Pixel(1, 1), Pixel(1, 2), Pixel(1, 3), Pixel(1, 4), Pixel(
                       Pixel(19, 19), Pixel(21, 18), Pixel(22, 18), Pixel(23, 17), Pixel(24, 17), Pixel(25, 15), Pixel(25, 14), Pixel(24, 14), Pixel(24, 13), Pixel(23, 12), Pixel(22, 12), Pixel(21, 12)]
 
 WhiteSoxLogoBadPixels = [Pixel(3, 0), Pixel(2, 1), Pixel(1, 2), Pixel(
-    0, 3), Pixel(0, 4), Pixel(0, 10), Pixel(1, 11), Pixel(1, 12), Pixel(2, 13), Pixel(2, 12), Pixel(3, 13), Pixel(1, 14), Pixel(0, 15), Pixel(0, 22), Pixel(1, 22), Pixel(2, 22), Pixel(3, 21), Pixel(4, 21), Pixel(5, 21),
+    0, 3), Pixel(0, 4), Pixel(0, 10), Pixel(1, 11), Pixel(1, 12), Pixel(2, 13), Pixel(2, 12), Pixel(3, 13), Pixel(1, 14), Pixel(0, 15), Pixel(0, 22), Pixel(1, 22), Pixel(2, 22), Pixel(3, 21), Pixel(4, 21), Pixel(5, 21), Pixel(9, 25),
     Pixel(6, 21), Pixel(6, 22), Pixel(5, 22), Pixel(6, 23), Pixel(7, 24), Pixel(8, 26), Pixel(8, 25), Pixel(8, 26), Pixel(
         8, 27), Pixel(8, 28), Pixel(9, 29), Pixel(9, 30), Pixel(14, 0), Pixel(17, 0), Pixel(18, 1), Pixel(18, 2),
-    Pixel(19, 2), Pixel(18, 3), Pixel(18, 4), Pixel(17, 5), Pixel(16, 6), Pixel(16, 7), Pixel(17, 8), Pixel(17, 9), Pixel(18, 9), Pixel(18, 10), Pixel(19, 11), Pixel(19, 12), Pixel(19, 13), Pixel(19, 14), Pixel(19, 15), Pixel(18, 15), Pixel(20, 15), Pixel(21, 16), Pixel(0, 0)]
+    Pixel(19, 2), Pixel(18, 3), Pixel(18, 4), Pixel(17, 5), Pixel(16, 6), Pixel(16, 7), Pixel(17, 8), Pixel(17, 9), Pixel(18, 9), Pixel(18, 10), Pixel(19, 11), Pixel(19, 12), Pixel(19, 13), Pixel(19, 14), Pixel(19, 15), Pixel(18, 15), Pixel(20, 15), Pixel(21, 16), Pixel(9, 29)]
 YankeesLogoBasPixels = []
 
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
