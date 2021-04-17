@@ -282,7 +282,7 @@ WhiteSoxLogoBadPixels = [Pixel(3, 0), Pixel(2, 1), Pixel(1, 2), Pixel(
         8, 27), Pixel(8, 28), Pixel(9, 29), Pixel(9, 30), Pixel(14, 0), Pixel(17, 0), Pixel(18, 1), Pixel(18, 2),
     Pixel(19, 2), Pixel(18, 3), Pixel(18, 4), Pixel(17, 5), Pixel(16, 6), Pixel(16, 7), Pixel(17, 8), Pixel(17, 9), Pixel(18, 9), Pixel(18, 10), Pixel(19, 11), Pixel(19, 12), Pixel(19, 13), Pixel(19, 14), Pixel(19, 15), Pixel(18, 15), Pixel(20, 15), Pixel(21, 16), Pixel(8, 29)]
 
-YankeesLogoBasPixels = [Pixel(0, 6), Pixel(1, 5), Pixel(2, 4), Pixel(
+YankeesLogoBadPixels = [Pixel(0, 6), Pixel(1, 5), Pixel(2, 4), Pixel(
     3, 3), Pixel(4, 3), Pixel(5, 2), Pixel(6, 1), Pixel(7, 0), Pixel(0, 11), Pixel(1, 12), Pixel(1, 13), Pixel(1, 14), Pixel(1, 17), Pixel(1, 18), Pixel(1, 19), Pixel(0, 21), Pixel(0, 22),
     Pixel(0, 29), Pixel(1, 30), Pixel(6, 30), Pixel(6, 29), Pixel(6, 28), Pixel(6, 27), Pixel(5, 26), Pixel(7, 24), Pixel(
         7, 23), Pixel(7, 22), Pixel(7, 15), Pixel(9, 17), Pixel(8, 16), Pixel(8, 17), Pixel(8, 18), Pixel(8, 19), Pixel(8, 20), Pixel(13, 0), Pixel(16, 1), Pixel(16, 3), Pixel(16, 4), Pixel(16, 2),
@@ -299,6 +299,9 @@ YankeesLogoBasPixels = [Pixel(0, 6), Pixel(1, 5), Pixel(2, 4), Pixel(
     Pixel(27, 5), Pixel(28, 6), Pixel(30, 8), Pixel(26, 11), Pixel(27, 11), Pixel(24, 18), Pixel(
         26, 5), Pixel(27, 6), Pixel(29, 8), Pixel(27, 27), Pixel(27, 25), Pixel(27, 23),
     Pixel(26, 22), Pixel(26, 21), Pixel(26, 20), Pixel(26, 12), Pixel(26, 13)]
+
+RockiesLogoBadPixels = [Pixel(10, 0), Pixel(11, 0), Pixel(12, 0), Pixel(7, 1), Pixel(
+    8, 1), Pixel(14, 1), Pixel(15, 1), Pixel(6, 2), Pixel(18, 2), Pixel(0, 0)]
 
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
              "Angels.png": AngelsLogoBadPixels,
@@ -320,7 +323,8 @@ teamsDict = {"Brewers.png": BrewersLogoBadPixels,
              "Tigers.png": TigersLogoBadPixels,
              "Twins.png": TwinsLogoBadPixels,
              "WhiteSox.png": WhiteSoxLogoBadPixels,
-             "Yankees.png": YankeesLogoBasPixels}
+             "Yankees.png": YankeesLogoBadPixels,
+             "Rockies.png": RockiesLogoBadPixels}
 
 
 def GetBadPixelList(teamLogoFileName):
