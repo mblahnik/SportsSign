@@ -306,7 +306,9 @@ RockiesLogoBadPixels = [Pixel(10, 0), Pixel(11, 0), Pixel(12, 0), Pixel(7, 1), P
         3, 17), Pixel(4, 18), Pixel(5, 19), Pixel(6, 20), Pixel(8, 21), Pixel(9, 21), Pixel(10, 21),
     Pixel(9, 24), Pixel(10, 24), Pixel(8, 26), Pixel(8, 27), Pixel(8, 28), Pixel(
         9, 30), Pixel(10, 30), Pixel(11, 30), Pixel(12, 30), Pixel(13, 30),
-    Pixel(14, 30), Pixel(15, 30), Pixel(16, 30), Pixel(20, 30), Pixel(21, 30), Pixel(22, 30), Pixel(23, 30), Pixel(24, 30)]
+    Pixel(14, 30), Pixel(15, 30), Pixel(16, 30), Pixel(20, 30), Pixel(
+        21, 30), Pixel(22, 30), Pixel(23, 30), Pixel(24, 30),
+    Pixel(26, 27), Pixel(15, 24), Pixel(15, 23), Pixel(16, 23), Pixel(17, 25)]
 
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
              "Angels.png": AngelsLogoBadPixels,
