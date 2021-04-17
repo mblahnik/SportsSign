@@ -292,10 +292,12 @@ YankeesLogoBasPixels = [Pixel(0, 6), Pixel(1, 5), Pixel(2, 4), Pixel(
         11, 27), Pixel(9, 26), Pixel(9, 27), Pixel(9, 29), Pixel(12, 30), Pixel(13, 30),
     Pixel(14, 30), Pixel(15, 30), Pixel(16, 30), Pixel(17, 30), Pixel(17, 27), Pixel(
         17, 26), Pixel(17, 25), Pixel(17, 24), Pixel(17, 23), Pixel(18, 28), Pixel(18, 24),
-    Pixel(19, 25), Pixel(19, 26), Pixel(20, 30), Pixel(20, 29), Pixel(20, 28), Pixel(10, 28), Pixel(25, 29), Pixel(27, 29), Pixel(21, 0), Pixel(22, 1)]
+    Pixel(19, 25), Pixel(19, 26), Pixel(20, 30), Pixel(20, 29), Pixel(20, 28), Pixel(
+        10, 28), Pixel(25, 29), Pixel(27, 29), Pixel(21, 0), Pixel(22, 1),
+    Pixel(29, 26), Pixel(28, 25)]
 
 teamsDict = {"Brewers.png": BrewersLogoBadPixels,
-             "Angels.png": AngelsLogoBadPixels,
+             "Angels.png": AngelsLogoBadPixels, 29 -
              "Astros.png": AstrosLogoBadPixels,
              "BlueJays.png": BlueJaysLogoBadPixels,
              "Braves.png": BravesLogoBadPixels,
