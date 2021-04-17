@@ -262,7 +262,7 @@ TwinsLogoBadPixels = [Pixel(1, 1), Pixel(1, 2), Pixel(1, 3), Pixel(1, 4), Pixel(
                           3, 10), Pixel(2, 11), Pixel(1, 12), Pixel(3, 9), Pixel(4, 8), Pixel(7, 6),
                       Pixel(0, 18), Pixel(1, 18), Pixel(1, 19), Pixel(2, 19), Pixel(1, 17), Pixel(23, 4), Pixel(
                           24, 4), Pixel(25, 5), Pixel(26, 5), Pixel(27, 6), Pixel(28, 7), Pixel(30, 7),
-                      Pixel(30, 6), Pixel(29, 8), Pixel(30, 9)]
+                      Pixel(30, 6), Pixel(29, 8), Pixel(30, 9), Pixel(13, 18), Pixel(13, 17), Pixel(13, 16), Pixel(13, 15), Pixel(13, 14), Pixel(13, 13), Pixel(13, 12), Pixel(13, 11)]
 WhiteSoxLogoBadPixels = []
 YankeesLogoBasPixels = []
 
