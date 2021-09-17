@@ -5,12 +5,13 @@ import time
 from Scene import Scene
 from MLBSceneRenderer import MLBSceneRenderer
 from MLBSceneGenerator import MLBSceneGenerator
-
+from NFLSceneGenerator import NFLSceneGenerator
+from NFLSceneRenderer import NFLSceneRenderer
 
 def main():
 
-    sceneGenerator = MLBSceneGenerator()
-    sceneRenderer = MLBSceneRenderer()
+    sceneGenerator = NFLSceneGenerator()
+    sceneRenderer = NFLSceneRenderer()
     sceneRenderer.printText("Loading...")
 
     while True:

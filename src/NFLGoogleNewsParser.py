@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 import requests
 from timeout import timeout
 from PIL import Image
-from NFLTeamLogos import GetMLBTeamLogoImage
+from NFLTeamLogos import GetNFLTeamLogoImage
 
 
 class NFLGoogleNewsParser:
@@ -32,7 +32,7 @@ class NFLGoogleNewsParser:
     def GetHomeTeamLogo(self):
         hometeamName = self.card.findAll('div', class_='MlH7je')[
             1].string.lower()
-        return GetMLBTeamLogoImage(hometeamName)
+        return GetNFLTeamLogoImage(hometeamName)
 
     def GetHomeTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
@@ -41,7 +41,7 @@ class NFLGoogleNewsParser:
     def GetAwayTeamLogo(self):
         awayteamName = self.card.findAll('div', class_='MlH7je')[
             0].string.lower()
-        return GetMLBTeamLogoImage(awayteamName)
+        return GetNFLTeamLogoImage(awayteamName)
 
     def GetAwayTeamScore(self):
         Scores = self.card.find_all('div', class_='nE4ijc')
@@ -67,9 +67,9 @@ class NFLGoogleNewsParser:
     def GetUpcomingGameHomeTeamLogo(self):
         homeTeamName = self.UpcomingGameCard.find_all(
             'div', class_='MlH7je')[1].string.lower()
-        return GetMLBTeamLogoImage(homeTeamName)
+        return GetNFLTeamLogoImage(homeTeamName)
 
     def GetUpcomingGameAwayTeamLogo(self):
         awayTeamName = self.UpcomingGameCard.find_all(
             'div', class_='MlH7je')[0].string.lower()
-        return GetMLBTeamLogoImage(awayTeamName)
+        return GetNFLTeamLogoImage(awayTeamName)
