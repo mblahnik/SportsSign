@@ -1,5 +1,5 @@
 from Scene import Scene
-from MLBGoogleNewsParser import MLBGoogleNewsParser
+from NFLGoogleNewsParser import NFLGoogleNewsParser
 import datetime
 
 dateDict = {'Jan': 1, 'Fed': 2, 'Mar': 3,
@@ -9,7 +9,7 @@ dateDict = {'Jan': 1, 'Fed': 2, 'Mar': 3,
 class MLBSceneGenerator:
     def __init__(self):
         super().__init__()
-        self.dataSource = MLBGoogleNewsParser()
+        self.dataSource = NFLGoogleNewsParser()
 
     def GetScene(self):
         scene = Scene()

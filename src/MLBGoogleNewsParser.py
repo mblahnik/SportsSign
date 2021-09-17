@@ -5,7 +5,7 @@ from PIL import Image
 from MLBTeamLogos import GetMLBTeamLogoImage
 
 
-class GoogleNewsParser:
+class MLBGoogleNewsParser:
 
     def __init__(self):
         super().__init__()

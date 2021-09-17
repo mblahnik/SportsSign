@@ -1,15 +1,15 @@
 from Scene import Scene
-from MLBGoogleNewsParser import MLBGoogleNewsParser
+from NFLGoogleNewsParser import NFLGoogleNewsParser
 import datetime
 
 dateDict = {'Jan': 1, 'Fed': 2, 'Mar': 3,
             'Apr': 4, 'May': 5, 'Jun': 6, 'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}
 
 
-class MLBSceneGenerator:
+class NFLSceneGenerator:
     def __init__(self):
         super().__init__()
-        self.dataSource = MLBGoogleNewsParser()
+        self.dataSource = NFLGoogleNewsParser()
 
     def GetScene(self):
         scene = Scene()
