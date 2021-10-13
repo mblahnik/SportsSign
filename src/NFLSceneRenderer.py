@@ -29,9 +29,9 @@ class NFLSceneRenderer:
     def RenderScene(self, scene):
 
         scene.Home_Team_Logo_Image.thumbnail(
-            (self.matrix.width, self.matrix.height), Image.ANTIALIAS)
+            (self.matrix.width-25, self.matrix.height-25), Image.ANTIALIAS)
         scene.Away_Team_Logo_Image.thumbnail(
-            (self.matrix.width, self.matrix.height), Image.ANTIALIAS)
+            (self.matrix.width-25, self.matrix.height-25), Image.ANTIALIAS)
 
         size = scene.Away_Team_Logo_Image.size
         width = size[0]
