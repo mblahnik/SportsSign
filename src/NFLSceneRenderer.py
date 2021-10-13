@@ -11,7 +11,7 @@ class NFLSceneRenderer:
 
     def __init__(self):
         super().__init__()
-        self.Away_Team_Logo_X = 0
+        self.Away_Team_Logo_X = 12 #was 0
         self.Away_Team_Logo_y = 33
         self.Home_Team_Logo_X = 37
         self.Home_Team_Logo_y = 33
