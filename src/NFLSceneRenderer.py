@@ -46,13 +46,13 @@ class NFLSceneRenderer:
         score = scene.Away_Team_Score + "-" + scene.Home_Team_Score
         scorePositionOffset = (score.index("-")+1) * 8
         self.buffer.Clear()
-        graphics.DrawText(self.buffer, bigfont, 32-scorePositionOffset,
-                          32, textColor, score)
-        graphics.DrawText(self.buffer, font, 29, 50, textColor, my_text)
         self.buffer.SetImage(scene.Away_Team_Logo_Image.convert(
             'RGB'), self.Away_Team_Logo_X, self.Away_Team_Logo_y)
         self.buffer.SetImage(scene.Home_Team_Logo_Image.convert(
             'RGB'), self.Home_Team_Logo_X, self.Home_Team_Logo_y)
+        graphics.DrawText(self.buffer, bigfont, 32-scorePositionOffset,
+                          32, textColor, score)
+        graphics.DrawText(self.buffer, font, 29, 50, textColor, my_text)
 
         if scene.MainText:
             textFont = graphics.Font()
