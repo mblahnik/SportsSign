@@ -12,9 +12,9 @@ class NFLSceneRenderer:
     def __init__(self):
         super().__init__()
         self.Away_Team_Logo_X = 0 #was 0
-        self.Away_Team_Logo_y = 25  # was 33 
+        self.Away_Team_Logo_y = 27  # was 33 
         self.Home_Team_Logo_X = 37
-        self.Home_Team_Logo_y = 25
+        self.Home_Team_Logo_y = 27
         options = RGBMatrixOptions()
         options.rows = 32
         options.cols = 64
