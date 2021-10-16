@@ -16,7 +16,7 @@ matrix = RGBMatrix(options=options)
 buffer = matrix.CreateFrameCanvas()
 
 
-image = Image.open("./TeamLogos/NFL/49ers.png")
+image = Image.open("./TeamLogos/NFL/packers.png")
 
 img_x = 0
 img_y = 0
