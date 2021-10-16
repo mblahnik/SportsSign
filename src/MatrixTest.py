@@ -2,7 +2,7 @@ from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 import time
 import os
-from MLBLogoBadPixels import GetBadPixelList
+from NFLLogoBadPixels import GetBadPixelList
 
 options = RGBMatrixOptions()
 options.rows = 32
@@ -30,7 +30,7 @@ matrix.SetImage(image.convert('RGB'), img_x, img_y)
 #matrix.Fill(255, 0, 0)
 #matrix.SetPixel(img_x + 0, img_y + 5, 0, 0, 0)
 
-for pixel in GetBadPixelList("Rockies.png"):
+for pixel in GetBadPixelList("bears.png"):
     matrix.SetPixel(img_x + pixel.x, img_y + pixel.y, 0, 0, 0)
 
 while True:
