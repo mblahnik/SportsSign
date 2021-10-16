@@ -6,7 +6,7 @@ class Pixel():
         self.x = x
         self.y = y
 
-BearsLogoBadPixels = [Pixel(3, 17)]
+BearsLogoBadPixels = [Pixel(3, 17), Pixel(3,18)]
 
 teamsDict = {"bears.png": BearsLogoBadPixels,
 #             "Angels.png": AngelsLogoBadPixels,
