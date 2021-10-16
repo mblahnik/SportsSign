@@ -16,12 +16,12 @@ matrix = RGBMatrix(options=options)
 buffer = matrix.CreateFrameCanvas()
 
 
-image = Image.open("./TeamLogos/MLB/Rockies.png")
+image = Image.open("./TeamLogos/NFL/49ers.png")
 
 img_x = 0
 img_y = 0
 
-image.thumbnail((matrix.width-33, matrix.height-33), Image.ANTIALIAS)
+image.thumbnail((matrix.width-23, matrix.height-23), Image.ANTIALIAS)
 
 #matrix.SetImage(image.convert('RGB'), 0, 0)
 
