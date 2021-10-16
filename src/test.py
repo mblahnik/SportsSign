@@ -19,4 +19,4 @@ print(currentDate)
 
 print(nextGameDate)
 
-print(difference.days)
+print((nextGameDate - currentDate).days >= 3)
