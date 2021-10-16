@@ -46,4 +46,4 @@ class NFLSceneGenerator:
         nextGameDate = datetime.datetime(
             year, dateDict[dateSplit[1]], int(dateSplit[2]))
 
-        return (nextGameDate - currentDate) >= 4
+        return (nextGameDate - currentDate) >= 3
