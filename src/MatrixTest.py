@@ -21,7 +21,7 @@ image = Image.open("./TeamLogos/NFL/packers.png")
 img_x = 0
 img_y = 0
 
-image.thumbnail((matrix.width-16, matrix.height-16), Image.ANTIALIAS)
+image.thumbnail((matrix.width-23, matrix.height-23), Image.ANTIALIAS)
 
 #matrix.SetImage(image.convert('RGB'), 0, 0)
 
