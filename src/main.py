@@ -10,8 +10,8 @@ from NFLSceneRenderer import NFLSceneRenderer
 
 def main():
 
-    sceneGenerator = NFLSceneGenerator()
-    sceneRenderer = NFLSceneRenderer()
+    sceneGenerator = MLBSceneGenerator()
+    sceneRenderer = MLBSceneRenderer()
     sceneRenderer.printText("Loading...")
 
     while True:
